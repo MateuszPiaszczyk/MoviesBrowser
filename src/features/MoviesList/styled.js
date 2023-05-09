@@ -15,10 +15,12 @@ export const List = styled.ul`
 `;
 
 export const Wrapper = styled.div`
-    background-color: ${({theme}) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.white};
     max-width: 324px;
     padding: 16px;
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+    border-radius: 5px;
+    margin-bottom: 24px;
 `;
 
 export const Poster = styled.img`
@@ -37,5 +39,21 @@ export const Title = styled.h2`
 
 export const Year = styled.div`
     font-size: 16px;
-    color: ${({theme}) => theme.colors.waterloo};
+    color: ${({ theme }) => theme.colors.waterloo};
+`;
+
+export const Tags = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 8px;
+`;
+
+export const Tag = styled.li`
+    background-color: ${({ theme }) => theme.colors.mystic};
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-right: 8px;
+    border-radius: 5px;
 `;
