@@ -6,7 +6,7 @@ export const MainHeader = styled.h1`
     font-weight: 600;
     margin-top: 56px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 18px;
         margin-top: 24px;
         padding-left: 24px;
@@ -18,9 +18,9 @@ export const List = styled.ul`
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 24px;
     padding: 0;
-    margin: 0;
+    margin: 0 0 24px 0;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         grid-template-columns: 1fr;
         justify-items: center;
         grid-gap: 16px;
@@ -33,9 +33,8 @@ export const Tile = styled.div`
     padding: 16px;
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
-    margin-bottom: 24px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         max-width: 330px;
         display: flex;
         margin-bottom: 0;
@@ -45,14 +44,14 @@ export const Tile = styled.div`
 export const Poster = styled.img`
     width: 292px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         max-width: 114px;
         max-height: 169px;
     }
 `;
 
 export const Content = styled.div`
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         margin-left: 24px;
     }
 `;
@@ -63,7 +62,7 @@ export const Title = styled.h2`
     line-height: 29px;
     margin: 16px 0;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 16px;
         margin: 0;
     }
@@ -73,7 +72,7 @@ export const Year = styled.div`
     font-size: 16px;
     color: ${({ theme }) => theme.colors.waterloo};
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 13px;
     }
 `;
@@ -93,7 +92,7 @@ export const Tag = styled.li`
     margin-right: 8px;
     border-radius: 5px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 10px;
         padding: 4px 8px;
         margin-bottom: 12px;
@@ -105,7 +104,7 @@ export const Rating = styled.section`
     align-items: center;
     margin-top: 40px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         margin-top: 0;
     }
 `;
@@ -113,7 +112,7 @@ export const Rating = styled.section`
 export const Star = styled(StarIcon)`
     width: 24px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         width: 16px;
     }
 `;
@@ -123,7 +122,7 @@ export const Rate = styled.div`
     font-size: 16px;
     padding: 0 12px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 13px;
         padding: 0 7px;
     }
@@ -133,7 +132,7 @@ export const Votes = styled.div`
     font-size: 16px;
     color: ${({ theme }) => theme.colors.waterloo};
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 13px;
     }
 `;
