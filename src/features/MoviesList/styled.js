@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as StarIcon } from "../../common/img/star.svg";
 
 export const MainHeader = styled.h1`
     font-size: 36px;
@@ -57,3 +58,26 @@ export const Tag = styled.li`
     margin-right: 8px;
     border-radius: 5px;
 `;
+
+export const Rating = styled.section`
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+`;
+
+export const Star = styled(StarIcon)`
+    width: 24px;
+`;
+
+export const Rate = styled.div`
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0 12px;
+`;
+
+export const Votes = styled.div`
+    font-size: 16px;
+    color: ${({ theme }) => theme.colors.waterloo};
+`;
+
+
