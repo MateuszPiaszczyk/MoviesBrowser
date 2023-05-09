@@ -14,7 +14,7 @@ export const List = styled.ul`
     margin: 0;
 `;
 
-export const Wrapper = styled.div`
+export const Tile = styled.div`
     background-color: ${({ theme }) => theme.colors.white};
     max-width: 324px;
     padding: 16px;

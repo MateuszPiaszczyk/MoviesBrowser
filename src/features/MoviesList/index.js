@@ -1,5 +1,5 @@
 import { Container } from "../../common/Container/styled";
-import { Content, List, MainHeader, Poster, Tag, Tags, Title, Wrapper, Year } from "./styled";
+import { Content, List, MainHeader, Poster, Tag, Tags, Title, Tile, Year } from "./styled";
 import poster from "../../common/img/poster.png";
 
 export const MovieList = () => {
@@ -7,7 +7,7 @@ export const MovieList = () => {
         <Container>
             <MainHeader>Popular Movies</MainHeader>
             <List>
-                <Wrapper>
+                <Tile>
                     <Poster src={poster} alt="movie poster" />
                     <Content>
                         <Title>Mulan</Title>
@@ -18,7 +18,7 @@ export const MovieList = () => {
                             <Tag>Drama</Tag>
                         </Tags>
                     </Content>
-                </Wrapper>
+                </Tile>
             </List>
         </Container>
     )
