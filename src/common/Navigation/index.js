@@ -1,5 +1,6 @@
 import {
   Icon,
+  NavigationGrid,
   NavigationItem,
   NavigationList,
   StyledNavigation,
@@ -15,6 +16,7 @@ import { Search } from "./Search";
 export const Navigation = () => {
   return (
     <StyledNavigation>
+      <NavigationGrid>
       <Wrapper>
         <TitleLink to="/movies">
           <Icon src={camera} />
@@ -28,8 +30,9 @@ export const Navigation = () => {
             <StyledNavigationLink to={toPeople()}>People</StyledNavigationLink>
           </NavigationItem>
         </NavigationList>
-        <Search />
       </Wrapper>
+      <Search />
+      </NavigationGrid>
     </StyledNavigation>
   );
 };

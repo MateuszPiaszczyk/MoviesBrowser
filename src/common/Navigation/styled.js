@@ -27,6 +27,21 @@ export const StyledNavigation = styled.nav`
   }
 `;
 
+export const NavigationGrid = styled.div`
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr auto;
+   @media (max-width: ${({ theme }) => theme.breakpoint.mmobileVertical}px) {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+`;
 export const Wrapper = styled.div`
   display: flex;
 `;
