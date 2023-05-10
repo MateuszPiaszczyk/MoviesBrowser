@@ -6,11 +6,10 @@ export const Search = () => {
         <Wrapper>
             <SearchBox >
             <StyledSearchIcon />
+            </SearchBox>
           <SearchInput
-            
             placeholder="Search for movies..."
           />
-          </SearchBox>
         </Wrapper>
       );
 };
