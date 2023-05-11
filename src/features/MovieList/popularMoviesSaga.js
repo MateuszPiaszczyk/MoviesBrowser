@@ -1,5 +1,5 @@
 import { call, delay, put, takeLatest } from "redux-saga/effects";
-import { popularMovies } from "./popularMovies";
+import { popularMovies } from "./getPopularMovies";
 import {
   fetchPopularMovies,
   fetchPopularMoviesError,
@@ -18,5 +18,5 @@ function* fetchPopularMoviesHandler() {
 }
 
 export function* popularMoviesSaga() {
-  yield takeLatest(fetchPopularMovies, fetchPopularMoviesHandler);
+  yield takeLatest(fetchPopularMovies.type, fetchPopularMoviesHandler);
 }
