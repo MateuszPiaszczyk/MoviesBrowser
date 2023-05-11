@@ -1,19 +1,18 @@
 import styled from "styled-components";
-import {ReactComponent as SearchIcon} from "../../../assets/search.svg";
+import { ReactComponent as SearchIcon } from "../../../assets/search.svg";
 
 export const Wrapper = styled.div`
-display: flex;
+  display: flex;
   align-items: center;
-  
-  
 `;
+
 export const SearchBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 45px;
   width: 60px;
-  border-radius: 33px 0  0 33px;
+  border-radius: 33px 0 0 33px;
   background: ${({ theme }) => theme.colors.white};
   color: ${({ theme }) => theme.colors.waterloo};
 
@@ -33,7 +32,7 @@ export const SearchInput = styled.input`
   width: 100%;
   padding: 20px;
   border: 1px solid ${({ theme }) => theme.colors.mystic};
-  border-radius: 0 33px 33px 0 ;
+  border-radius: 0 33px 33px 0;
   outline-offset: 10px;
   cursor: pointer;
 

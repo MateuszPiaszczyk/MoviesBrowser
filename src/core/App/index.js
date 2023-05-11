@@ -8,8 +8,6 @@ import { Navigation } from "../../common/Navigation";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Normalize />
-      <GlobalStyle />
       <Navigation />
       <MovieList />
     </ThemeProvider>
