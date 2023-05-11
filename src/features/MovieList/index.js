@@ -12,14 +12,14 @@ export const MovieList = () => {
     dispatch(fetchPopularMovies());
   }, []);
   const status = useSelector(selectPopularMoviesStatus);
-  const a = useSelector(selectPopularMoviesList);
+  const fetchResult = useSelector(selectPopularMoviesList);
   if (status === "success") {
-    console.log(a.results);
+    console.log(fetchResult.results);
     return (
       <>
         <div>
           <ul>
-            {a.results.map((movie) => (
+            {fetchResult.results.map((movie) => (
               <li key={movie.id}>{movie.title}</li>
             ))}
           </ul>
