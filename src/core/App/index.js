@@ -9,8 +9,6 @@ import RenderPage from "../../features/RenderPage";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Normalize />
-      <GlobalStyle />
       <Navigation />
       <MovieList />
       <RenderPage />

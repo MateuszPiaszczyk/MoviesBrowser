@@ -4,16 +4,16 @@ import styled from "styled-components";
 const activeClassName = "link-active";
 
 export const StyledNavigationLink = styled.a`
-font-size: 14px;
-padding: 12.5px 24px;
-color: ${({ theme }) => theme.colors.white};
-text-decoration: none;
-text-transform: uppercase;
+  font-size: 14px;
+  padding: 12.5px 24px;
+  color: ${({ theme }) => theme.colors.white};
+  text-decoration: none;
+  text-transform: uppercase;
 
-&:active {
-  border: 1px solid ${({ theme }) => theme.colors.white};
-  border-radius: 24px;
-}
+  &:active {
+    border: 1px solid ${({ theme }) => theme.colors.white};
+    border-radius: 24px;
+  }
 `;
 
 export const StyledNavigation = styled.nav`
@@ -31,7 +31,7 @@ export const NavigationGrid = styled.div`
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr auto;
-   @media (max-width: ${({ theme }) => theme.breakpoint.mmobileVertical}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mmobileVertical}px) {
     width: 100%;
     grid-template-columns: 1fr;
     gap: 24px;
@@ -54,7 +54,7 @@ export const TitleLink = styled.a`
 `;
 
 export const Title = styled.h1`
-  font-weight: 300;
+  font-weight: 500;
   font-size: 24px;
   color: ${({ theme }) => theme.colors.white};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
@@ -74,6 +74,7 @@ export const Icon = styled.img`
 export const NavigationList = styled.ul`
   list-style: none;
   display: flex;
+  align-items: center
   gap:15px
   margin:0;
 `;
