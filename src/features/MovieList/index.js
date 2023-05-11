@@ -5,9 +5,8 @@ import {
   selectPopularMoviesStatus,
 } from "./popularMoviesSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { img } from "../../core/App/apiCodes";
 
-const MovieList = () => {
+export const MovieList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchPopularMovies());
@@ -21,10 +20,7 @@ const MovieList = () => {
         <div>
           <ul>
             {a.results.map((movie) => (
-              <li key={movie.id}>
-                {movie.title}
-                <img src={`${img}${movie}`} alt=""></img>
-              </li>
+              <li key={movie.id}>{movie.title}</li>
             ))}
           </ul>
         </div>
@@ -32,5 +28,3 @@ const MovieList = () => {
     );
   }
 };
-
-export default MovieList;
