@@ -31,8 +31,14 @@ export const Tile = styled.div`
     background-color: ${({ theme }) => theme.colors.white};
     max-width: 324px;
     padding: 16px;
-    box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+    box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.lightHeather};
     border-radius: 5px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &:hover {
+        transform: scale(105%);
+        box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.waterloo};
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         max-width: 330px;
