@@ -4,6 +4,7 @@ import { GlobalStyle } from "./GlobalStyle";
 import { theme } from "./theme";
 import { MovieList } from "../../features/MoviesList";
 import { Navigation } from "../../common/Navigation";
+import RenderPage from "../../features/RenderPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <GlobalStyle />
       <Navigation />
       <MovieList />
+      <RenderPage />
     </ThemeProvider>
   );
 }

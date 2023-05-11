@@ -2,7 +2,6 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 import { Navigation } from "../../common/Navigation";
 import { toMovie, toMovies, toPeople, toPerson } from "./routes";
 import { useState, useEffect } from "react";
-import MovieBox from "../../MovieBox";
 
 export const App = () => (
   <HashRouter>
@@ -25,6 +24,5 @@ export const App = () => (
       </Route>
       <Working />
     </Switch>
-    <MovieBox />
   </HashRouter>
 );
