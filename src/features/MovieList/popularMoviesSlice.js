@@ -3,24 +3,23 @@ import { createSlice } from "@reduxjs/toolkit";
 const popularMoviesSlice = createSlice({
   name: "popularMovies",
   initialState: {
-    movieList: null,
+    popularMoviesList: null,
     status: "null",
   },
 
   reducers: {
-    fetchPopularMovies: (page) => ({
+    fetchPopularMovies: () => ({
       status: "loading",
       popularMoviesList: null,
-      page,
     }),
-    fetchPopularMoviesSuccess: ({ payload: popularMoviesList }) => ({
+    fetchPopularMoviesSuccess: (_, { payload: popularMoviesList }) => ({
       status: "success",
       popularMoviesList,
       page: popularMoviesList.page,
     }),
     fetchPopularMoviesError: () => ({
       status: "error",
-      movieList: null,
+      popularMoviesList: null,
     }),
   },
 });

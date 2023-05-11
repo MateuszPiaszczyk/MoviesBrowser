@@ -6,14 +6,14 @@ import {
   fetchPopularMoviesSuccess,
 } from "./popularMoviesSlice";
 
-function* fetchPopularMoviesHandler({ payload }) {
+function* fetchPopularMoviesHandler() {
   try {
-    const moviesList = yield call(popularMovies, payload);
+    const popularMoviesList = yield call(popularMovies);
     yield delay(1000);
-    yield put(fetchPopularMoviesSuccess(moviesList));
+    yield put(fetchPopularMoviesSuccess(popularMoviesList));
   } catch (error) {
     yield put(fetchPopularMoviesError());
-    yield call("Download failed");
+    yield call(alert, "Download failed");
   }
 }
 
