@@ -5,6 +5,7 @@ import { Normalize } from "styled-normalize";
 import App from "./core/App";
 import { GlobalStyle } from "./core/App/GlobalStyle";
 import { theme } from "./core/App/theme";
+import { BrowserRouter as Router } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -13,7 +14,9 @@ root.render(
     <ThemeProvider theme={theme}>
       <Normalize />
       <GlobalStyle />
+      <Router>
       <App />
+      </Router>
     </ThemeProvider>
   </React.StrictMode>
 );
