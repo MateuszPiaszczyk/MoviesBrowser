@@ -4,6 +4,7 @@ import { ReactComponent as StarIcon } from "../../common/img/star.svg";
 export const Tile = styled.div`
     background-color: ${({ theme }) => theme.colors.white};
     max-width: 324px;
+    height: 682px;
     padding: 16px;
     box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.lightHeather};
     border-radius: 5px;

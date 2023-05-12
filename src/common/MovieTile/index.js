@@ -1,13 +1,13 @@
-import { Tile, Poster, Content, Title, Year, Tags, Tag, Rating, Star, Rate, Votes } from "./styled"
-import poster from "../../common/img/poster.png";
+import { Tile, Poster, Content, Title, Year, Tags, Tag, Rating, Star, Rate, Votes } from "./styled";
+import { img } from "../../core/apiCodes";
 
-export const MovieTile = () => {
+export const MovieTile = ({ movie }) => {
     return (
         <Tile>
-            <Poster src={poster} alt="movie poster" />
+            <Poster src={`${img}${movie.poster_path}`} alt="movie poster" />
             <Content>
-                <Title>Mulan</Title>
-                <Year>2020</Year>
+                <Title>{movie.title}</Title>
+                <Year>{movie.release_date.slice(0, 4)}</Year>
                 <Tags>
                     <Tag>Action</Tag>
                     <Tag>Adventure</Tag>
