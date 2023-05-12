@@ -3,14 +3,16 @@ import styled from "styled-components";
 
 const activeClassName = "link-active";
 
-export const StyledNavigationLink = styled.a`
+export const StyledNavigationLink = styled(NavLink).attrs(() => ({
+  activeClassName,
+}))`
   font-size: 14px;
   padding: 12.5px 24px;
   color: ${({ theme }) => theme.colors.white};
   text-decoration: none;
   text-transform: uppercase;
 
-  &:active {
+  &.${activeClassName} {
     border: 1px solid ${({ theme }) => theme.colors.white};
     border-radius: 24px;
   }
