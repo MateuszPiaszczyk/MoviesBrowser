@@ -1,16 +1,19 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const activeClassName = "link-active";
 
-export const StyledNavigationLink = styled.a`
+export const StyledNavigationLink = styled(NavLink).attrs(() => ({
+  activeClassName,
+}))`
   font-size: 14px;
+  font-weight: 600;
   padding: 12.5px 24px;
   color: ${({ theme }) => theme.colors.white};
   text-decoration: none;
   text-transform: uppercase;
 
-  &:active {
+  &.${activeClassName} {
     border: 1px solid ${({ theme }) => theme.colors.white};
     border-radius: 24px;
   }
@@ -31,22 +34,19 @@ export const NavigationGrid = styled.div`
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr auto;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mmobileVertical}px) {
-    width: 100%;
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
+  
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
     width: 100%;
     grid-template-columns: 1fr;
     gap: 24px;
   }
 `;
+
 export const Wrapper = styled.div`
   display: flex;
 `;
 
-export const TitleLink = styled.a`
+export const TitleLink = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
