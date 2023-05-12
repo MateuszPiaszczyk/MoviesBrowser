@@ -1,12 +1,12 @@
 import { Tile, Poster, Content, Title, Year, Tags, Tag, Rating, Star, Rate, Votes } from "./styled"
 import poster from "../../common/img/poster.png";
 
-export const MovieTile = () => {
+export const MovieTile = ({ movie }) => {
     return (
         <Tile>
             <Poster src={poster} alt="movie poster" />
             <Content>
-                <Title>Mulan</Title>
+                <Title>{movie.title}</Title>
                 <Year>2020</Year>
                 <Tags>
                     <Tag>Action</Tag>
