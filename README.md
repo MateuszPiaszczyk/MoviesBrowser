@@ -1,3 +1,17 @@
+<h1 align="center">Movie Browser<h1>
+
+# This is a demo of our application, where you can see currently popular movies, actors and information about them
+
+[Demo Movie Browser](https://mateuszpiaszczyk.github.io/MoviesBrowser/)
+
+## Used technologies, languages
+
+- React
+- JavaScript
+- Redux-Saga
+
+## Further readme it will show up soon
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -38,7 +52,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-API_URL="https://api.themoviedb.org/3/movie/popular?api_key=ae7d4af255a05506e1ed3b49e48b0d5c"
-API_IMG="https://image.tmdb.org/t/p/w500/"
-API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=ae7d4af255a05506e1ed3b49e48b0d5c&query"
