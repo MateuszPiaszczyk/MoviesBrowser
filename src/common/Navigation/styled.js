@@ -34,7 +34,7 @@ export const NavigationGrid = styled.div`
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr auto;
-  
+
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
     width: 100%;
     grid-template-columns: 1fr;
@@ -64,19 +64,20 @@ export const Title = styled.h1`
 
 export const Icon = styled.img`
   height: 40px;
-  weight: 40px;
+  width: 40px;
+
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     height: 20px;
-    weight: 20px;
+    width: 20px;
   }
 `;
 
 export const NavigationList = styled.ul`
   list-style: none;
   display: flex;
-  align-items: center
-  gap:15px
-  margin:0;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
 `;
 
 export const NavigationItem = styled.li`
