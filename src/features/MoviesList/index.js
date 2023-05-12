@@ -2,8 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Container } from "../../common/Container/styled";
 import {
     Content,
-    List,
-    MainHeader,
     Poster,
     Tag,
     Tags,
@@ -14,7 +12,8 @@ import {
     Rating,
     Rate,
     Votes,
-} from "./styled";
+} from "../../common/MovieTile/styled";
+import { MainHeader, List } from "./styled";
 import poster from "../../common/img/poster.png";
 import { useEffect } from "react";
 import {
