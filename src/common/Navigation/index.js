@@ -18,27 +18,27 @@ export const Navigation = () => {
   return (
     <StyledNavigation>
       <Container>
-      <NavigationGrid>
-        <Wrapper>
-          <TitleLink to={toMovies()}>
-            <Icon src={camera} />
-            <Title>Movies Browser</Title>
-          </TitleLink>
-          <NavigationList>
-            <NavigationItem>
-              <StyledNavigationLink to={toMovies()}>
-                Movies
-              </StyledNavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <StyledNavigationLink to={toPeople()}>
-                People
-              </StyledNavigationLink>
-            </NavigationItem>
-          </NavigationList>
-        </Wrapper>
-        <Search />
-      </NavigationGrid>
+        <NavigationGrid>
+          <Wrapper>
+            <TitleLink to={toMovies()}>
+              <Icon src={camera} />
+              <Title>Movies Browser</Title>
+            </TitleLink>
+            <NavigationList>
+              <NavigationItem>
+                <StyledNavigationLink to={toMovies()}>
+                  Movies
+                </StyledNavigationLink>
+              </NavigationItem>
+              <NavigationItem>
+                <StyledNavigationLink to={toPeople()}>
+                  People
+                </StyledNavigationLink>
+              </NavigationItem>
+            </NavigationList>
+          </Wrapper>
+          <Search />
+        </NavigationGrid>
       </Container>
     </StyledNavigation>
   );

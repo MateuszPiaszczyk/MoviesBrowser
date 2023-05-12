@@ -15,7 +15,7 @@ export const SearchBox = styled.div`
   border-radius: 33px 0 0 33px;
   background: ${({ theme }) => theme.colors.white};
   color: ${({ theme }) => theme.colors.waterloo};
-  cursor: pointer;  
+  cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     height: 45px;
@@ -45,6 +45,5 @@ export const SearchInput = styled.input`
     height: 48px;
     width: 100%;
     padding: 10px;
-    
   }
 `;
