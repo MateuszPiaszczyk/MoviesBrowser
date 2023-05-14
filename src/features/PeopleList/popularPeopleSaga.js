@@ -17,5 +17,5 @@ function* fetchPopularPeopleHandler() {
 }
 
 export function* popularPeopleSaga() {
-  yield takeLatest(fetchPopularPeople, fetchPopularPeopleHandler);
+  yield takeLatest(fetchPopularPeople.type, fetchPopularPeopleHandler);
 }

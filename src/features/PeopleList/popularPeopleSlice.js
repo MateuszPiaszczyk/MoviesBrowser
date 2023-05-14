@@ -12,7 +12,7 @@ const popularPeopleSlice = createSlice({
       status: "loading",
       popularPeopleList: null,
     }),
-    fetchPopularPeopleSuccess: () => ({
+    fetchPopularPeopleSuccess: (_,{payload: popularPeopleList}) => ({
       status: "success",
       popularPeopleList,
     }),
