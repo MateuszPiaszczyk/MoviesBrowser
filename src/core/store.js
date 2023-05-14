@@ -12,6 +12,7 @@ const store = configureStore({
   reducer: {
     popularMovies: popularMoviesReducer,
     genres: genresReducer,
+    popularPeople: popularPeopleReducer,
   },
   middleware: [sagaMiddleware],
 });
