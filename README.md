@@ -10,7 +10,7 @@
 - JavaScript
 - Redux-Saga
 
-## Further readme it will show up soon
+## This readme wil be updating along with our aplication.
 
 # Getting Started with Create React App
 
