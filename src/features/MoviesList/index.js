@@ -26,7 +26,9 @@ export const MoviesList = () => {
         <List>
           {fetchResult.results.map((movie) => (
             <div key={movie.id}>
-              <MovieTile movie={movie} />
+              <MovieTile 
+              movie={movie} 
+              />
             </div>
           ))}
         </List>
