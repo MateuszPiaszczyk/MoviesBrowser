@@ -6,6 +6,7 @@ export const Tile = styled.div`
     max-width: 324px;
     height: 682px;
     padding: 16px;
+    position: relative;
     box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.lightHeather};
     border-radius: 5px;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -32,6 +33,12 @@ export const Poster = styled.img`
 `;
 
 export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         margin-left: 24px;
     }
@@ -80,10 +87,13 @@ export const Tag = styled.li`
     }
 `;
 
-export const Rating = styled.section`
+export const Rating = styled.div`
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 8px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         margin-top: 0;

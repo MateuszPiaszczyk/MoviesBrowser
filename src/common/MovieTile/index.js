@@ -15,8 +15,8 @@ export const MovieTile = ({ movie }) => {
                 </Tags>
                 <Rating>
                     <Star />
-                    <Rate>7,8</Rate>
-                    <Votes>35 votes</Votes>
+                    <Rate>{movie.vote_average}</Rate>
+                    <Votes>{movie.vote_count}</Votes>
                 </Rating>
             </Content>
         </Tile>
