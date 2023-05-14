@@ -5,3 +5,4 @@ export const url = "https://api.themoviedb.org/3";
 export const img = "https://image.tmdb.org/t/p/w500/";
 export const searchAPI = "https://api.themoviedb.org/3/search";
 export const movieID = "https://api.themoviedb.org/3/movie/";
+export const apiGenres = "https://api.themoviedb.org/3/genre/movie/list";
