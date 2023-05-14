@@ -39,3 +39,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+API_URL="https://api.themoviedb.org/3/movie/popular?api_key=ae7d4af255a05506e1ed3b49e48b0d5c"
+API_IMG="https://image.tmdb.org/t/p/w500/"
+API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=ae7d4af255a05506e1ed3b49e48b0d5c&query"
