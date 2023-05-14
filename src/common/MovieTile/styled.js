@@ -18,6 +18,7 @@ export const Tile = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         max-width: 330px;
+        height: 200px;
         display: flex;
         margin-bottom: 0;
     }
@@ -41,6 +42,7 @@ export const Content = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         margin-left: 24px;
+        justify-content: normal;
     }
 `;
 
@@ -53,6 +55,7 @@ export const Title = styled.h2`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 16px;
         margin: 0;
+        line-height: 16px;
     }
 `;
 
@@ -97,6 +100,7 @@ export const Rating = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         margin-top: 0;
+        position: inherit;
     }
 `;
 
