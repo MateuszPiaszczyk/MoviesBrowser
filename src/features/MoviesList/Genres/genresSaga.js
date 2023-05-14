@@ -16,6 +16,6 @@ function* fetchGenresHandler() {
   }
 }
 
-export function* GenresSaga() {
+export function* genresSaga() {
   yield takeLatest(fetchGenres, fetchGenresHandler);
 }
