@@ -5,15 +5,22 @@ import reportWebVitals from "./reportWebVitals";
 import { theme } from "./core/App/theme";
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
-import store from "./core/store"
+import store from "./core/store";
+import { HashRouter } from "react-router-dom";
+import { GlobalStyle } from "./core/App/GlobalStyle";
+import { Normalize } from "styled-normalize";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store} >
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <HashRouter>
+          <GlobalStyle />
+          <Normalize />
+          <App />
+        </HashRouter>
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>
 );
@@ -22,4 +29,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
