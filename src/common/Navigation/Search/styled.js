@@ -4,6 +4,7 @@ import { ReactComponent as SearchIcon } from "../../../assets/search.svg";
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  padding: 0 10px
 `;
 
 export const SearchBox = styled.div`
@@ -17,11 +18,6 @@ export const SearchBox = styled.div`
   color: ${({ theme }) => theme.colors.waterloo};
   cursor: pointer;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-    height: 45px;
-    width: 100%;
-    margin: 0 15px;
-  }
 `;
 
 export const StyledSearchIcon = styled(SearchIcon)`
