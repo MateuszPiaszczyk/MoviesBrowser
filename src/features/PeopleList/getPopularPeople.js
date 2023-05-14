@@ -1,6 +1,6 @@
 import { key, ApiPopularPeople } from "../../core/apiCodes";
 
-export const getPopularPerson = async () => {
+export const getPopularPeople = async () => {
   try {
     const response = await fetch(
       `${ApiPopularPeople}?api_key-=${key}&language=en-US&page=1`
