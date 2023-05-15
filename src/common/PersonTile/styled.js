@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Tile = styled.div`
     background-color: ${({ theme }) => theme.colors.white};
     max-width: 208px;
-    height: 340px;
+    height: 380px;
     padding: 16px;
 `;
 

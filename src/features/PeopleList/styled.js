@@ -6,6 +6,7 @@ export const List = styled.ul`
   grid-gap: 24px;
   padding: 0;
   margin: 0 0 24px 0;
+  list-style: none;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     grid-template-columns: repeat(2, 1fr);
