@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   align-items: center;
   outline-offset: 10px;
   cursor: pointer;
-  
 `;
 
 export const SearchBox = styled.div`
@@ -18,7 +17,6 @@ export const SearchBox = styled.div`
   border-radius: 33px 0 0 33px;
   background: ${({ theme }) => theme.colors.white};
   color: ${({ theme }) => theme.colors.waterloo};
-
 `;
 
 export const StyledSearchIcon = styled(SearchIcon)`
@@ -30,7 +28,6 @@ export const SearchInput = styled.input`
   border: none;
   width: 392px;
   border-radius: 0 33px 33px 0;
- 
 
   &::placeholder {
     font-size: 16px;
@@ -39,12 +36,10 @@ export const SearchInput = styled.input`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     height: 48px;
     width: 100%;
-  
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
     height: 48px;
     width: 100%;
-  
   }
 `;
