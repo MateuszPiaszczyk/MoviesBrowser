@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { toMovies, toPeople } from "../../../core/App/routes";
-import {
-  useQueryParameter,
-  useReplaceQueryParameter,
-} from "../../../queryParameters";
+import { useQueryParameter, useReplaceQueryParameter } from "../../../queryParameters";
 import { searchQueryParamName } from "../../../searchQueryParamName";
 import { SearchBox, SearchInput, StyledSearchIcon, Wrapper } from "./styled";
 
@@ -22,9 +19,7 @@ export const Search = () => {
       setWaiting(false);
       setTimeout(() => {
         replaceQueryParameter({
-          basicURL: location.pathname.includes("movie")
-            ? toMovies()
-            : toPeople(),
+          baseUrl: location.pathname.includes("movie") ? toMovies() : toPeople(),
           key: searchQueryParamName,
           value: target.value.trim() !== "" ? target.value : undefined,
         });
