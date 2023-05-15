@@ -8,13 +8,16 @@ const popularPeopleSlice = createSlice({
   },
 
   reducers: {
-    fetchPopularPeople: () => ({
+    fetchPopularPeople: (page) => ({
       status: "loading",
       popularPeopleList: null,
+      page
+    
     }),
     fetchPopularPeopleSuccess: (_,{payload: popularPeopleList}) => ({
       status: "success",
       popularPeopleList,
+      page: popularPeopleList.page
     }),
     fetchPopularPeopleError: () => ({
       status: "error",
@@ -34,5 +37,5 @@ export const selectPopularPeopleStatus = (state) =>
   selectStatePopularPeople(state).status;
 export const selectPopularPeopleList = (state) =>
   selectStatePopularPeople(state).popularPeopleList;
-
+export const selectPeoplePage = (state) => selectStatePopularPeople(state).page;
 export default popularPeopleSlice.reducer;
