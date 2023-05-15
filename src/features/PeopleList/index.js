@@ -11,7 +11,7 @@ export const PeopleList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchPopularPeople());
-  });
+  },[]);
 
   const status = useSelector(selectPopularPeopleStatus);
   const fetchResult = useSelector(selectPopularPeopleList);
