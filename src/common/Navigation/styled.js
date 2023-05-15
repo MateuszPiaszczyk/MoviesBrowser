@@ -26,7 +26,7 @@ export const StyledNavigation = styled.nav`
   padding: 22px 16px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-    padding: 16px 0;
+    padding: 16px 10px;
   }
 `;
 
@@ -57,6 +57,7 @@ export const Title = styled.h1`
   font-weight: 500;
   font-size: 24px;
   color: ${({ theme }) => theme.colors.white};
+
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     font-size: 13px;
   }
