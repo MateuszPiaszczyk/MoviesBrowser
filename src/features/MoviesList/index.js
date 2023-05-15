@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Container } from "../../common/Container/styled";
-import { MainHeader, List } from "./styled";
+import { MainHeader } from "../../common/MainHeader";
+import { List } from "./styled";
 import { useEffect } from "react";
 import {
   fetchPopularMovies,
@@ -22,7 +23,9 @@ export const MoviesList = () => {
 
     return (
       <Container>
-        <MainHeader>Popular Movies</MainHeader>
+        <MainHeader 
+          title="Popular Movies"
+        />
         <List>
           {fetchResult.results.map((movie) => (
             <div key={movie.id}>
