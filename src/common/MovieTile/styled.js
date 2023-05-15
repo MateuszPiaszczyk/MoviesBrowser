@@ -26,6 +26,7 @@ export const Tile = styled.div`
 
 export const Poster = styled.img`
     width: 292px;
+    border-radius: 5px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         max-width: 114px;
