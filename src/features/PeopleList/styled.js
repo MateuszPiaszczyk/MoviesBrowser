@@ -9,8 +9,12 @@ export const List = styled.ul`
   list-style: none;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    grid-gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
   }
+`;
+
+export const ListItem = styled.li`
 `;
