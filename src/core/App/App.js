@@ -6,6 +6,7 @@ import { PeopleList } from "../../features/PeopleList";
 
 import { toMovie, toMovies, toPeople, toPerson } from "./routes";
 
+
 export const App = () => (
   <>
     <Navigation />
