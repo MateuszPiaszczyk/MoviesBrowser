@@ -6,7 +6,7 @@ import {
 } from "./popularPeopleSlice";
 import { useEffect } from "react";
 import { MainHeader } from "../../common/MainHeader";
-import { List } from "./styled";
+import { List, ListItem } from "./styled";
 import { Container } from "../../common/Container/styled";
 import { PersonTile } from "../../common/PersonTile";
 
@@ -26,11 +26,11 @@ export const PeopleList = () => {
         />
         <List>
           {fetchResult.results.map((person) => (
-            <li key={person.id}>
+            <ListItem key={person.id}>
               <PersonTile
                 person={person}
               />
-            </li>
+            </ListItem>
           ))}
         </List>
       </Container>
