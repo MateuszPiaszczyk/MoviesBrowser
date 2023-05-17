@@ -9,6 +9,7 @@ import {
   selectPopularMoviesStatus,
 } from "./popularMoviesSlice";
 import { MovieTile } from "../../common/MovieTile";
+import { ErrorPage } from "../../common/ErrorPage";
 
 export const MoviesList = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ export const MoviesList = () => {
   const fetchResult = useSelector(selectPopularMoviesList);
   if (status === "success") {
     console.log(fetchResult.results);
-
+    if (status === "error") return <ErrorPage />
     return (
       <Container>
         <MainHeader 
@@ -31,6 +32,8 @@ export const MoviesList = () => {
             <div key={movie.id}>
               <MovieTile 
               movie={movie} 
+              id={movie.id}
+              genres={movie.genre_ids}
               />
             </div>
           ))}

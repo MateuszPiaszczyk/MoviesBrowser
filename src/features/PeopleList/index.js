@@ -9,16 +9,20 @@ import { MainHeader } from "../../common/MainHeader";
 import { List, ListItem } from "./styled";
 import { Container } from "../../common/Container/styled";
 import { PersonTile } from "../../common/PersonTile";
+import { ErrorPage } from "../../common/ErrorPage";
 
 export const PeopleList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchPopularPeople());
   }, []);
+  
 
   const status = useSelector(selectPopularPeopleStatus);
   const fetchResult = useSelector(selectPopularPeopleList);
-  if (status === "success") {
+  if (status === "success") 
+  {
+   if (status === "error") return <ErrorPage />
     return (
       <Container>
         <MainHeader

@@ -1,7 +1,9 @@
 import { Tile, Poster, Content, Title, Year, Tags, Tag, Rating, Star, Rate, Votes } from "./styled";
 import { img } from "../../core/apiCodes";
+import { Genres } from "../../features/MoviesList/Genres";
 
-export const MovieTile = ({ movie }) => {
+export const MovieTile = ({ movie, genres}) => {
+    const genresMovie = Genres.filter((genre) => genres.includes(genre.id));
     return (
         <Tile>
             <Poster src={`${img}${movie.poster_path}`} alt="movie poster" />
@@ -9,14 +11,16 @@ export const MovieTile = ({ movie }) => {
                 <Title>{movie.title}</Title>
                 <Year>{movie.release_date.slice(0, 4)}</Year>
                 <Tags>
-                    <Tag>Action</Tag>
-                    <Tag>Adventure</Tag>
-                    <Tag>Drama</Tag>
+                {genres ? genresMovie.map((genre) => (
+                    <Tag key={genre.id}>
+                        <Tag>{genre.name}</Tag>
+                    </Tag>
+                )): null}
                 </Tags>
                 <Rating>
                     <Star />
                     <Rate>{movie.vote_average}</Rate>
-                    <Votes>{movie.vote_count}</Votes>
+                    <Votes>{movie.vote_count} votes</Votes>
                 </Rating>
             </Content>
         </Tile>
