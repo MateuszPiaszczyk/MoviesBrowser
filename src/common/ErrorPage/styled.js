@@ -8,8 +8,8 @@ text-align: center;
 `;
 
 export const ErrorMessage = styled.p`
-font-weight: 600;
-font-size: 36;
+font-weight: 600px;
+font-size: 36px;
 line-height: 43px;
 margin: 24px 0 0 0;
 `

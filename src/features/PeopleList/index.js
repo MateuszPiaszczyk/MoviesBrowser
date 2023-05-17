@@ -22,7 +22,7 @@ export const PeopleList = () => {
   const fetchResult = useSelector(selectPopularPeopleList);
   if (status === "success") 
   {
-    if (status === "error") return <ErrorPage />
+   if (status === "error") return <ErrorPage />
     return (
       <Container>
         <MainHeader
