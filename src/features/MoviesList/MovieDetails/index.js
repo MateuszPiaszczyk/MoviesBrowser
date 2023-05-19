@@ -17,7 +17,6 @@ export const MovieDetails = () => {
         }
     }, []);
 
-    console.log(movieInfo)
     const status = useSelector(selectMovieDetailsStatus)
     if (status ==="error") return <ErrorPage />
     
