@@ -18,10 +18,12 @@ export const List = styled.ul`
   grid-gap: 24px;
   padding: 0;
   margin: 0 0 24px 0;
+  justify-content: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     grid-template-columns: 1fr;
     justify-items: center;
     grid-gap: 16px;
+    margin: 12px auto 0
   }
 `;

@@ -10,6 +10,7 @@ import { List, ListItem } from "./styled";
 import { Container } from "../../common/Container/styled";
 import { PersonTile } from "../../common/PersonTile";
 import { ErrorPage } from "../../common/ErrorPage";
+import { Pagination } from "../../common/Pagination";
 
 export const PeopleList = () => {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ export const PeopleList = () => {
             </ListItem>
           ))}
         </List>
+        <Pagination />
       </Container>
     );
   }
