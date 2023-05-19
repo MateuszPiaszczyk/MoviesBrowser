@@ -1,4 +1,4 @@
-import { key, ApiPopularMovies } from "../../core/apiCodes";
+import { key, ApiPopularMovies, url, apiMovieDetails } from "../../core/apiCodes";
 
 export const popularMovies = async () => {
   try {
@@ -14,3 +14,15 @@ export const popularMovies = async () => {
     console.error(error);
   }
 };
+
+
+export const getMovieDetails = async (id) => {
+  const response = await fetch(
+    `${url}${apiMovieDetails}${id}?api_key=${key}`
+  );
+  if (!response.ok) {
+    throw new Error("Not found movies.");
+  }
+  const data = await response.json()
+  return data;
+}
