@@ -11,8 +11,11 @@ import {
 import { MovieTile } from "../../common/MovieTile";
 import { ErrorPage } from "../../common/ErrorPage";
 
+import { Pagination } from "../../common/Pagination";
+
 export const MoviesList = () => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchPopularMovies());
   }, []);
@@ -38,6 +41,7 @@ export const MoviesList = () => {
             </div>
           ))}
         </List>
+        <Pagination />
       </Container>
     );
   }
