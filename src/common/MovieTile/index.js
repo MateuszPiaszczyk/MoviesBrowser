@@ -1,4 +1,4 @@
-import { Tile, Poster, Content, Title, Year, Tags, Tag, Rating, Star, Rate, Votes } from "./styled";
+import { Tile, Poster, Content, Title, Year, Tags, Tag, TagName, Rating, Star, Rate, Votes } from "./styled";
 import { img } from "../../core/apiCodes";
 import { Genres } from "../../features/MoviesList/Genres";
 
@@ -13,7 +13,7 @@ export const MovieTile = ({ movie, genres}) => {
                 <Tags>
                 {genres ? genresMovie.map((genre) => (
                     <Tag key={genre.id}>
-                        <Tag>{genre.name}</Tag>
+                        <TagName>{genre.name}</TagName>
                     </Tag>
                 )): null}
                 </Tags>
