@@ -1,9 +1,8 @@
 import { Redirect, Route, Switch } from "react-router-dom";
-
 import { Navigation } from "../../common/Navigation";
 import { MoviesList } from "../../features/MoviesList";
 import { PeopleList } from "../../features/PeopleList";
-
+import { MovieDetails } from "../../features/MoviesList/MovieDetails"
 import { toMovie, toMovies, toPeople, toPerson } from "./routes";
 
 
@@ -14,7 +13,9 @@ export const App = () => (
       <Route path={toMovies()}>
         <MoviesList />
       </Route>
-      <Route path={toMovie()}>test</Route>
+      <Route path={toMovie()}>
+        <MovieDetails />
+        </Route>
       <Route path={toPeople()}>
         <PeopleList />
       </Route>
