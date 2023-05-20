@@ -15,7 +15,7 @@ export const MovieDetails = () => {
         if (id) {
             dispatch(fetchMovieDetails(id))
         }
-    }, []);
+    }, [dispatch]);
 
     const status = useSelector(selectMovieDetailsStatus)
     if (status ==="error") return <ErrorPage />

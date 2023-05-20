@@ -18,12 +18,12 @@ export const MoviesList = () => {
 
   useEffect(() => {
     dispatch(fetchPopularMovies());
-  }, []);
+  }, [dispatch]);
 
   const status = useSelector(selectPopularMoviesStatus);
   const fetchResult = useSelector(selectPopularMoviesList);
   if (status === "success") {
-    console.log(fetchResult.results);
+    
     if (status === "error") return <ErrorPage />
     return (
       <Container>
