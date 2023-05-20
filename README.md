@@ -1,14 +1,17 @@
 <h1 align="center">Movie Browser<h1>
 
-# This is a demo of our application, where you can see currently popular movies, actors and information about them
+![Movies Browser Komodo Team Project](https://piaszczykstudio.pl/wp-content/uploads/2023/05/share.jpg)
+ 
 
+## Description  
+This is a group project co-created with [Mateusz Piaszczyk](https://github.com/MateuszPiaszczyk) [Dawid Zięba](https://github.com/Dawid-Zieba) and [Aneta Borowski](https://github.com/BoAneta).
+
+## Demo Link
 [Demo Movie Browser](https://mateuszpiaszczyk.github.io/MoviesBrowser/)
 
 ## Used technologies, languages
 
-- React
-- JavaScript
-- Redux-Saga
+`JavaScript ES+` `React` `Redux` `Redux-saga` `API` `styled-component` `RWD` `Normalize` 
 
 ## This readme wil be updating along with our aplication.
 
