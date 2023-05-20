@@ -13,9 +13,16 @@ export const theme = {
     },
 
     breakpoint: {
+        fullPage: 1200,
         tabletHorizontal: 992,
         mobileVertical: 767,
         mobileMin: 420,
-        fullPage: 1200,
       },
+
+      fontWeight: {
+        light: 300,
+        regular: 400,
+        medium: 500,
+        semiBold: 600,
+      }
 };
