@@ -13,7 +13,7 @@ export const App = () => (
       <Route path={toMovies()}>
         <MoviesList />
       </Route>
-      <Route path={toMovie()}>
+      <Route path={toMovie({ movieId: ":movieId" })}>
         <MovieDetails />
         </Route>
       <Route path={toPeople()}>
