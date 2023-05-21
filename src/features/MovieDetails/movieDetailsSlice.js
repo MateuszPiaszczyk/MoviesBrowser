@@ -8,13 +8,13 @@ const movieDetailsSlice = createSlice({
     },
 
     reducers: {
-        fetchMovieDetails: (_,{payload: id}) => ({
+        fetchMovieDetails: (_,{payload: movieId}) => ({
             movieInfo: "loading",
             status: null,
-            id
+            movieId
             
         }),
-        fetchMovieDetailsSuccess:(_,{payload:movieInfo}) => ({
+        fetchMovieDetailsSuccess:(_,{payload: movieInfo}) => ({
             status:"success",
             movieInfo,
         }),
