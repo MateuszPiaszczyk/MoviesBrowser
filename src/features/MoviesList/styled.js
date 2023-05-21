@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const MainHeader = styled.h1`
   font-size: 36px;
@@ -26,4 +27,10 @@ export const List = styled.ul`
     grid-gap: 16px;
     margin: 12px auto 0
   }
+`;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.woodsmoke};
+    
 `;

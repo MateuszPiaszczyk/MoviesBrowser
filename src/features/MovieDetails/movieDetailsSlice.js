@@ -36,4 +36,6 @@ export const selectMovieDetailsStatus = (state) => selectMovieDetails(state).sta
 export const selectMovieInfo = (state) => selectMovieDetails(state).movieInfo;
 export const selectError = (state) => selectMovieDetails(state).error;
 
+export const getMovieById = (state, movieId) => selectMovieDetails(state).find(({ id }) => id === movieId);
+
 export default movieDetailsSlice.reducer;
