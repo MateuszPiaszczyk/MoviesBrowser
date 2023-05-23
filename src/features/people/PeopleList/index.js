@@ -5,12 +5,12 @@ import {
   selectPopularPeopleStatus,
 } from "./popularPeopleSlice";
 import { useEffect } from "react";
-import { MainHeader } from "../../common/MainHeader";
+import { MainHeader } from "../../../common/MainHeader";
 import { List, ListItem } from "./styled";
-import { Container } from "../../common/Container/styled";
-import { PersonTile } from "../../common/PersonTile";
-import { ErrorPage } from "../../common/ErrorPage";
-import { Pagination } from "../../common/Pagination";
+import { Container } from "../../../common/Container/styled";
+import { PersonTile } from "../../../common/PersonTile";
+import { ErrorPage } from "../../../common/ErrorPage";
+import { Pagination } from "../../../common/Pagination";
 
 export const PeopleList = () => {
   const dispatch = useDispatch();

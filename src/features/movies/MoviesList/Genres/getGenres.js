@@ -1,4 +1,4 @@
-import { key, url } from "../../../core/apiCodes";
+import { key, url } from "../../../../core/apiCodes";
 
 export const getGenres = async () => {
   try {

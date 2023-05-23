@@ -1,4 +1,4 @@
-import { key, url, apiMovieDetails } from "../../core/apiCodes";
+import { key, url, apiMovieDetails } from "../../../core/apiCodes";
 
 export const getMovieDetails = async (movieId) => {
     const response = await fetch(
