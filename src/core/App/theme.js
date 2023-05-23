@@ -18,4 +18,9 @@ export const theme = {
         mobileMin: 420,
         fullPage: 1200,
       },
+
+      spinner: {
+        snuff: "#DDDDEE",
+        black: "#000000"
+      }
 };
