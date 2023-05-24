@@ -21,6 +21,20 @@ export const List = styled.ul`
   margin: 0 0 24px 0;
   justify-content: center;
 
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletHorizonta}px) {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 16px;
+    margin: 12px auto 0
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-gap: 16px;
+    margin: 12px auto 0
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     grid-template-columns: 1fr;
     justify-items: center;
