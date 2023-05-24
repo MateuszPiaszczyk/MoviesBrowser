@@ -1,6 +1,19 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+
+export const Wrapper = styled.div`
+  margin: 0 auto;
+  padding: 16px;
+  max-width: 1368px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+    width: 100%;
+    margin: 24px auto;
+  }
+`;
+
+
 export const MainHeader = styled.h1`
   font-size: 36px;
   font-weight: 600;

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Container } from "../../../common/Container/styled";
 import { MainHeader } from "../../../common/MainHeader";
-import { List, StyledLink } from "./styled";
+import { List, StyledLink, Wrapper } from "./styled";
 import { useEffect } from "react";
 import {
   fetchPopularMovies,
@@ -26,7 +26,7 @@ export const MoviesList = () => {
     console.log(fetchResult.results);
     if (status === "error") return <ErrorPage />;
     return (
-      <Container>
+      <Wrapper>
         <MainHeader title="Popular Movies" />
         <List>
           {fetchResult.results.map((movie) => (
@@ -42,7 +42,7 @@ export const MoviesList = () => {
           ))}
         </List>
         <Pagination />
-      </Container>
+      </Wrapper>
     );
   }
 };
