@@ -27,7 +27,8 @@ export const Tile = styled.div`
 `;
 
 export const Poster = styled.img`
-    width: 292px;
+    max-width: 292px;
+    width: 30vw;
     border-radius: 5px;
     justify-self: center;
 
