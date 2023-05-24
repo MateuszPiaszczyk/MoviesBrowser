@@ -25,12 +25,11 @@ export const List = styled.ul`
     grid-template-columns: 1fr;
     justify-items: center;
     grid-gap: 16px;
-    margin: 12px auto 0
+    margin: 12px auto 0;
   }
 `;
 
 export const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.woodsmoke};
-    
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.woodsmoke};
 `;
