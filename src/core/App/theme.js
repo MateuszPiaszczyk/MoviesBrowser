@@ -9,7 +9,8 @@ export const theme = {
         scienceBlue: "#0044CC",
         pattensBlue: "#D6E4FF",
         silver: "#C4C4C4",
-        mine: "#333333"
+        mine: "#333333",
+        black: "#000000"
     },
 
     breakpoint: {
@@ -22,5 +23,11 @@ export const theme = {
       spinner: {
         snuff: "#DDDDEE",
         black: "#000000"
+      },
+
+      fontWeight: {
+        regular: 400,
+        medium: 500,
+        bold: 600,
       }
 };
