@@ -17,7 +17,7 @@ import { Container } from "../Container/styled";
 export const Navigation = () => {
   return (
     <StyledNavigation>
-     
+      <Container>
         <NavigationGrid>
           <Wrapper>
             <TitleLink to={toMovies()}>
@@ -39,7 +39,7 @@ export const Navigation = () => {
           </Wrapper>
           <Search />
         </NavigationGrid>
-
+      </Container>
     </StyledNavigation>
   );
 };
