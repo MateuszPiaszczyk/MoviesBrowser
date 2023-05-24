@@ -4,7 +4,7 @@ import { ReactComponent as StarIcon } from "../../common/img/star.svg";
 export const Tile = styled.div`
     background-color: ${({ theme }) => theme.colors.white};
     max-width: 324px;
-    height: 682px;
+    height: 730px;
     padding: 16px;
     position: relative;
     box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.lightHeather};
@@ -17,8 +17,16 @@ export const Tile = styled.div`
         box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.waterloo};
     }
 
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        width: 330px;
+        height: 230px;
+        display: flex;
+        margin-bottom: 0;
+        padding: 16px;
+    }
+
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-        max-width: 330px;
+        width: 330px;
         height: 200px;
         display: flex;
         margin-bottom: 0;
@@ -32,9 +40,14 @@ export const Poster = styled.img`
     border-radius: 5px;
     justify-self: center;
 
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        max-width: 114px;
+        margin-bottom: 0;
+        margin: 0;
+    }
+
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         max-width: 114px;
-        max-height: 169px;
         margin-bottom: 0;
         margin: 0;
     }
@@ -45,6 +58,11 @@ export const Content = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        margin-left: 24px;
+        justify-content: normal;
+    }
 
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
@@ -57,7 +75,13 @@ export const Title = styled.h2`
     font-weight: 500;
     font-size: 22px;
     line-height: 29px;
-    margin: 0;
+    margin: 10px 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        font-size: 16px;
+        margin: 0 0 8px 0;
+        line-height: 16px;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 16px;
@@ -71,6 +95,12 @@ export const Year = styled.div`
     margin: 0;
     line-height: 1.5;
     color: ${({ theme }) => theme.colors.waterloo};
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        font-size: 15px;
+        margin: 0 0 6px 0;
+        font-weight: 400;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 13px;
@@ -88,6 +118,13 @@ export const Tags = styled.ul`
     margin-top: 8px;
     gap: 8px;
 
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 16px 6px 0;
+    }
+
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         display: flex;
         flex-wrap: wrap;
@@ -99,7 +136,7 @@ export const Tags = styled.ul`
 
 export const Tag = styled.li`
     background-color: ${({ theme }) => theme.colors.mystic};
-    padding: 8px 16px;
+    padding: 16px;
     font-size: 14px;
     border-radius: 5px;
     margin-right: 8px;
@@ -107,6 +144,11 @@ export const Tag = styled.li`
     display: flex;
     border: none;
     height: 20px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        padding: 4px 8px;
+        height: 20px;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         padding: 4px 8px;
@@ -119,6 +161,11 @@ font-size: 14px;
 font-weight: 400;
 line-height: 4px;
 color: ${({ theme }) => theme.colors.woodsmoke};
+
+@media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        font-size: 10px;
+        line-height: 1.2;
+    }
 
  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 10px;
@@ -136,6 +183,11 @@ export const Rating = styled.div`
     gap: 12px;
     margin: 0;
 
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        margin-top: 0;
+        position: inherit;
+    }
+
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         margin-top: 0;
         position: inherit;
@@ -144,6 +196,10 @@ export const Rating = styled.div`
 
 export const Star = styled(StarIcon)`
     width: 24px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        width: 16px;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         width: 16px;
@@ -154,6 +210,11 @@ export const Rate = styled.div`
     font-weight: 600;
     font-size: 16px;
     padding: 0 12px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        font-size: 13px;
+        padding: 0 7px;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 13px;
@@ -166,6 +227,11 @@ export const Votes = styled.div`
     font-weight: 400;
     color: ${({ theme }) => theme.colors.waterloo};
     line-height: 1.5;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+        font-size: 13px;
+        line-height: 1.3;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 13px;
