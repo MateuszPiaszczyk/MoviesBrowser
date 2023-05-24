@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { toMovies, toPeople } from "../../../core/App/routes";
 import { useQueryParameter, useReplaceQueryParameter } from "../../../features/queryParameters";
-import { searchQueryParamName } from "../../../features/searchQueryParamName";
+import { searchQueryParamName } from "../../../features/queryParamName";
 import { SearchBox, SearchInput, StyledSearchIcon, Wrapper } from "./styled";
 
 export const Search = () => {

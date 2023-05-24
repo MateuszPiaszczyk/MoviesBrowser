@@ -24,21 +24,19 @@ export const MoviesList = () => {
   const fetchResult = useSelector(selectPopularMoviesList);
   if (status === "success") {
     console.log(fetchResult.results);
-    if (status === "error") return <ErrorPage />
+    if (status === "error") return <ErrorPage />;
     return (
       <Container>
-        <MainHeader 
-          title="Popular Movies"
-        />
+        <MainHeader title="Popular Movies" />
         <List>
           {fetchResult.results.map((movie) => (
             <div key={movie.id}>
-              <StyledLink to={toMovie({movieId: movie.id})} >
-              <MovieTile 
-              movie={movie} 
-              id={movie.id}
-              genres={movie.genre_ids}
-              />
+              <StyledLink to={toMovie({ movieId: movie.id })}>
+                <MovieTile
+                  movie={movie}
+                  id={movie.id}
+                  genres={movie.genre_ids}
+                />
               </StyledLink>
             </div>
           ))}

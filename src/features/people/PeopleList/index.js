@@ -17,24 +17,18 @@ export const PeopleList = () => {
   useEffect(() => {
     dispatch(fetchPopularPeople());
   }, []);
-  
 
   const status = useSelector(selectPopularPeopleStatus);
   const fetchResult = useSelector(selectPopularPeopleList);
-  if (status === "success") 
-  {
-   if (status === "error") return <ErrorPage />
+  if (status === "success") {
+    if (status === "error") return <ErrorPage />;
     return (
       <Container>
-        <MainHeader
-          title="Popular People"
-        />
+        <MainHeader title="Popular People" />
         <List>
           {fetchResult.results.map((person) => (
             <ListItem key={person.id}>
-              <PersonTile
-                person={person}
-              />
+              <PersonTile person={person} />
             </ListItem>
           ))}
         </List>
