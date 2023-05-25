@@ -1,8 +1,8 @@
 import { call, select , put, takeLatest } from "redux-saga/effects";
-import { getPopularMovies } from "./getPopularMovies";
-import { fetchMoviesListSuccess, fetchMoviesListError, selectPage, goToPage, selectQuery } from "./popularMoviesSlice";
+import { goToPage,fetchMoviesListError, fetchMoviesListSuccess,selectQuery, selectPage } from "./popularMoviesSlice";
 import { searchMovie } from "../../../common/Navigation/Search/getSearch";
-import { getGenres } from "./Genres/getGenres";
+import { getGenres} from "../../../features/movies/Genres/getGenres";
+import { popularMovies} from "../../../features/movies/MoviesList/getPopularMovies";
 
 function* fetchPopularMoviesHandler() {
   try {
@@ -13,7 +13,7 @@ function* fetchPopularMoviesHandler() {
     if (query !== "") {
       data = yield call(searchMovie, {page: page, query: query});
     } else {
-      data = yield call(getPopularMovies, {page: page})
+      data = yield call(popularMovies, {page: page})
     }
     yield put(fetchMoviesListSuccess({data, genres}));
   } catch (error) {

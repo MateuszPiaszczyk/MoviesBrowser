@@ -1,22 +1,37 @@
 import { Wrapper, Button, ButtonText, Text, PageText } from "./styled";
+import { useReplaceQueryParameter } from "../../queryParameters";
+import { pageQueryParamName } from "../../searchQueryParamName";
 
-export const Pagination = () => {
+export const Pagination = ({ pageNumber, totalPages }) => {
+  const replaceQueryParameter = useReplaceQueryParameter();
+
+  const page = parseInt(pageNumber);
+
+  const toPage = (currentPage) => {
+    replaceQueryParameter([
+      {
+        key: pageQueryParamName,
+        value: currentPage,
+      },
+    ]);
+  };
   return (
     <Wrapper>
-      <Button>
+      <Button disabled={page === 1} onClick={() => toPage(1)}>
         <ButtonText>First</ButtonText>
       </Button>
-      <Button>
+      <Button disabled={page === 1} onClick={() => toPage(page - 1)}>
         <ButtonText>Previous</ButtonText>
       </Button>
       <Text>Page</Text>
-      <PageText>1</PageText>
+      <PageText>{page}</PageText>
       <Text>of</Text>
-      <PageText>500</PageText>
-      <Button>
+      <PageText>{totalPages}</PageText>
+      <Button disabled={page === totalPages} onClick={() => toPage(page + 1)}>
         <ButtonText>Next</ButtonText>
       </Button>
-      <Button>
+      <Button disabled={page === totalPages}
+        onClick={() => toPage(totalPages)}>
         <ButtonText>Last</ButtonText>
       </Button>
     </Wrapper>
