@@ -13,8 +13,8 @@ export const theme = {
     },
 
     breakpoint: {
-        tabletHorizontal: 992,
-        mobileVertical: 767,
+        tablet: 992,
+        mobileMax: 767,
         mobileMin: 420,
         fullPage: 1200,
       },
