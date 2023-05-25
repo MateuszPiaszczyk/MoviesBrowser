@@ -1,11 +1,17 @@
 import styled from "styled-components";
+import noPhoto from "../img/no-photo.svg";
 
 export const Tile = styled.div`
     background-color: ${({ theme }) => theme.colors.white};
-    max-width: 208px;
-    height: 380px;
+    box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.lightHeather};
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-radius: 5px;
     padding: 16px;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.lightHeather};
 
     &:hover {
         transform: scale(105%);
@@ -13,20 +19,44 @@ export const Tile = styled.div`
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-        width: 165px;
-        height: 280px;
-        margin: 0;
+        grid-template-columns: auto 1fr; 
+        width: 330px;
+    }
+`;
+
+export const PhotoWrapper = styled.div`
+    height: auto;
+    border-radius: 5px;
+    aspect-ratio: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    flex-basis: auto; 
+    background-image: url(${noPhoto});
+    background-size: 100%;
+    background-color: ${({ theme }) => theme.colors.silver};
+    color: ${({ theme }) => theme.colors.white};
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        height: fit-content;
     }
 `;
 
 export const Photo = styled.img`
-    max-width: 177px;
-    border-radius: 5%;
-    margin-bottom: 16px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    aspect-ratio: 2/3;
 
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        height: fit-content;
+    }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-        max-width: 100%;
-        margin-bottom: 8px;
+        width: 120px;
     }
 `;
 
@@ -34,6 +64,7 @@ export const Name = styled.div`
     font-weight: 500;
     font-size: 22px;
     text-align: center;
+    margin-top: 14px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 14px;
