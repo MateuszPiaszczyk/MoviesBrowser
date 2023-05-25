@@ -12,12 +12,12 @@ import {
 import camera from "../../assets/camera.svg";
 import { toMovies, toPeople } from "../../core/App/routes";
 import { Search } from "./Search";
-import { Container } from "../Container/styled";
+
 
 export const Navigation = () => {
   return (
     <StyledNavigation>
-      <Container>
+ 
         <NavigationGrid>
           <Wrapper>
             <TitleLink to={toMovies()}>
@@ -39,7 +39,7 @@ export const Navigation = () => {
           </Wrapper>
           <Search />
         </NavigationGrid>
-      </Container>
+     
     </StyledNavigation>
   );
 };
