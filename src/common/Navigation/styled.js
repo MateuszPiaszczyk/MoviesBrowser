@@ -25,11 +25,12 @@ export const StyledNavigation = styled.nav`
   padding: 22px 16px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-    padding: 16px 10px;
+    padding: 16px 9px;
   }
 `;
 
 export const NavigationGrid = styled.div`
+  max-width: 100%;
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr auto;
@@ -78,8 +79,18 @@ export const NavigationList = styled.ul`
   align-items: center;
   gap: 15px;
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+    padding: 10px;
+    gap: 0;
+  }
 `;
 
 export const NavigationItem = styled.li`
   flex-grow: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+    padding: 0;
+    font-size: 12px;
+  }
 `;
