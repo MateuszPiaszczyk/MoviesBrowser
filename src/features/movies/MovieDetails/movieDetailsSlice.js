@@ -3,37 +3,42 @@ import { createSlice } from "@reduxjs/toolkit";
 const movieDetailsSlice = createSlice({
   name: "movieDetails",
   initialState: {
-    movieInfo: null,
-    status: null,
+  status: "loading",
+  movieId: 0,
+  credits: [],
+  details: [],
   },
 
   reducers: {
-    fetchMovieDetails: (_, { payload: movieId }) => ({
-      movieInfo: "loading",
-      status: null,
-      movieId,
-    }),
-    fetchMovieDetailsSuccess: (_, { payload: movieInfo }) => ({
-      status: "success",
-      movieInfo,
-    }),
-    fetchMovieDetailsError: () => ({
-      movieInfo: null,
-      status: "error",
-    }),
+    fetchMovieDetailsSuccess: (state, { payload: movie }) => {
+      state.status = "success";
+      state.details = movie.details;
+      state.credits = movie.credits;
+    },
+    fetchMovieDetailsError: (state, {payload}) => {
+      state.status= "error";
+      state.movieId = payload.movieId;
+    },
+    getMovieId: (state, { payload }) => {
+      state.status = "loading";
+      state.movieId = payload.movieId;
+    },
   },
 });
 
 export const {
-  fetchMovieDetails,
   fetchMovieDetailsSuccess,
   fetchMovieDetailsError,
+  getMovieId,
 } = movieDetailsSlice.actions;
 
-export const selectMovieDetails = (state) => state.movieDetails;
-export const selectMovieDetailsStatus = (state) =>
-  selectMovieDetails(state).status;
-export const selectMovieInfo = (state) => selectMovieDetails(state).movieInfo;
-export const selectError = (state) => selectMovieDetails(state).error;
+export const selectMovieState = (state) => state.movieDetails;
+export const selectStatus = (state) => selectMovieState(state).status;
+export const selectDetails = (state) => selectMovieState(state).details;
+export const selectCredits = (state) => selectMovieState(state).credits;
+export const selectMovieId = (state) => selectMovieState(state).movieId;
+export const selectCrew = (state) => selectMovieState(state).crew;
+export const selectCast = (state) => selectMovieState(state).cast;
+
 
 export default movieDetailsSlice.reducer;

@@ -1,12 +1,23 @@
-import { key, url, apiMovieDetails } from "../../../core/apiCodes";
+import { key, url,} from "../../../core/apiCodes";
 
-export const getMovieDetails = async (movieId) => {
-    const response = await fetch(
-      `${url}${apiMovieDetails}${movieId}?api_key=${key}`
-    );
-    if (!response.ok) {
-      throw new Error("Not found movies.");
-    }
-    const data = await response.json()
-    return data;
+export const getMovieDetails = async ({ movieId }) => {
+  const response = await fetch(
+    `${url}/movie/${movieId}?api_key=${key}&language=en-US`
+  );
+  if (!response.ok) {
+    new Error(response.statusText);
   }
+
+  return await response.data;
+};
+
+
+export const getMovieCredits = async ({ movieId }) => {
+  const response = await fetch(
+    `${url}/movie/${movieId}/credits?api_key=${key}&language=en-US`
+  );
+  if (!response.ok) {
+    new Error(response.statusText);
+  }
+  return await response.data;
+};
