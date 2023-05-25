@@ -156,7 +156,7 @@ font-weight: 400;
 line-height: 4px;
 color: ${({ theme }) => theme.colors.woodsmoke};
 
-@media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+@media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
         font-size: 10px;
         line-height: 1.2;
     }
@@ -184,7 +184,7 @@ export const Star = styled(StarIcon)`
     width: 24px;
     height: auto;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
         width: 20px;
     }
 
@@ -198,7 +198,7 @@ export const Rate = styled.div`
     font-size: 16px;
     padding: 0 12px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
         font-size: 13px;
         padding: 0 7px;
     }
@@ -214,7 +214,7 @@ export const Votes = styled.div`
     color: ${({ theme }) => theme.colors.waterloo};
     line-height: 1.5;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
         font-size: 14px;
         line-height: 1.3;
     }
