@@ -69,14 +69,13 @@ export const Content = styled.div`
     gap: 8px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
-        /* margin-left: 8px; */
+        margin-left: 8px;
         gap: 4px;
-        justify-content: normal;
-        
+        justify-content: normal; 
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        /* margin-left: 6px; */
+        margin-left: 6px;
         gap: 4px;
         justify-content: normal;
     }
@@ -88,6 +87,10 @@ export const Title = styled.h2`
     line-height: 1.3;
     color: ${({ theme }) => theme.colors.woodSmoke};
     margin: 16px 0 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
+        font-size: 18px;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         margin: 6px 0 0 0;
@@ -105,6 +108,10 @@ export const Year = styled.div`
     line-height: 1.5;
     margin: 8px 0 0 0px;
     color: ${({ theme }) => theme.colors.waterloo};
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
+        font-size: 14px;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         font-size: 14px;
@@ -157,8 +164,7 @@ export const TagName = styled.p`
   color: ${({ theme }) => theme.colors.woodsmoke};
 
 @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
-        font-size: 10px;
-        line-height: 1.2;
+        font-size: 12px;
     }
 
  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
