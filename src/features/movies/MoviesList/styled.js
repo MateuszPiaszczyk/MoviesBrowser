@@ -32,7 +32,6 @@ export const List = styled.ul`
 `;
 
 export const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.woodsmoke};
-    
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.woodsmoke};
 `;

@@ -10,7 +10,6 @@ import { HashRouter } from "react-router-dom";
 import { GlobalStyle } from "./core/App/GlobalStyle";
 import { Normalize } from "styled-normalize";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

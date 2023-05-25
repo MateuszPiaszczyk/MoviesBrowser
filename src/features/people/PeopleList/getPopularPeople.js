@@ -1,4 +1,4 @@
-import { key, ApiPopularPeople } from "../../core/apiCodes";
+import { key, ApiPopularPeople } from "../../../core/apiCodes";
 
 export const getPopularPeople = async () => {
   try {

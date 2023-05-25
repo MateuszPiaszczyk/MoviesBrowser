@@ -13,11 +13,11 @@ export const Tile = styled.div`
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.lightHeather};
 
-    &:hover {
-        transform: scale(105%);
-        box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.waterloo};
-    }
-
+  &:hover {
+    transform: scale(105%);
+    box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.waterloo};
+  }
+  
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         grid-template-columns: auto 1fr; 
         width: 330px;
@@ -66,7 +66,7 @@ export const Name = styled.div`
     text-align: center;
     margin-top: 14px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-        font-size: 14px;
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+    font-size: 14px;
+  }
 `;

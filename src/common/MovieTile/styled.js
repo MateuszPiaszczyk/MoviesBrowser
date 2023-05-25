@@ -151,10 +151,10 @@ export const Tag = styled.div`
 `;
 
 export const TagName = styled.p`
-font-size: 14px;
-font-weight: 400;
-line-height: 4px;
-color: ${({ theme }) => theme.colors.woodsmoke};
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 4px;
+  color: ${({ theme }) => theme.colors.woodsmoke};
 
 @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
         font-size: 10px;
@@ -188,15 +188,15 @@ export const Star = styled(StarIcon)`
         width: 20px;
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-        width: 16px;
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+    width: 16px;
+  }
 `;
 
 export const Rate = styled.div`
-    font-weight: 600;
-    font-size: 16px;
-    padding: 0 12px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0 12px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
         font-size: 13px;

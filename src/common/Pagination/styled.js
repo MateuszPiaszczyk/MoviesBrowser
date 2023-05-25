@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-display: inline-flex;
+  display: inline-flex;
   gap: 8px;
   width: 100%;
   justify-content: center;
@@ -10,7 +10,7 @@ display: inline-flex;
 `;
 
 export const Button = styled.button`
-display: flex;
+  display: flex;
   flex-wrap: nowrap;
   align-items: center;
   gap: 8px;
@@ -22,7 +22,7 @@ display: flex;
   border: none;
   cursor: pointer;
   transition: 0.3s;
-  
+
   &:hover {
     filter: brightness(105%);
     transform: scale(1.01);
