@@ -1,9 +1,9 @@
 import { Wrapper, NoResultIcon } from "./styled";
 import { Container } from "../Container";
 
-export const NoResult = () => (
+export const NoResult = ({ query }) => (
   <Container>
-    <Message title={"Sorry,there are no results for this movie"} />
+    <Message title={`Sorry,there are no results for this "${query}"`} />
     <Wrapper>
       <NoResultIcon />
     </Wrapper>
