@@ -114,7 +114,7 @@ export const Year = styled.div`
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        font-size: 14px;
+        font-size: 12px;
         margin: 2px 0 0 0;
     }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
@@ -162,10 +162,6 @@ export const TagName = styled.p`
   font-weight: 400;
   line-height: 4px;
   color: ${({ theme }) => theme.colors.woodsmoke};
-
-@media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
-        font-size: 12px;
-    }
 
  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
         font-size: 10px;
