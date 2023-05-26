@@ -24,26 +24,27 @@ export const StyledNavigation = styled.nav`
   width: 100%;
   padding: 22px 16px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 16px 9px;
   }
 `;
 
 export const NavigationGrid = styled.div`
-  max-width: 100%;
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr auto;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     width: 100%;
     grid-template-columns: 1fr;
-    gap: 24px;
+    
   }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
+  width: 100%;
+  
 `;
 
 export const TitleLink = styled(Link)`
