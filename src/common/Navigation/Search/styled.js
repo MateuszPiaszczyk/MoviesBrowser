@@ -25,6 +25,7 @@ export const StyledSearchIcon = styled(SearchIcon)`
 
 export const SearchInput = styled.input`
   display: grid;
+  grid-template-columns: auto 1fr;
   height: 48px;
   border: none;
   width: 350px;
@@ -36,7 +37,7 @@ export const SearchInput = styled.input`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     height: 48px;
-    
+
     grid-template-columns: 1fr;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {

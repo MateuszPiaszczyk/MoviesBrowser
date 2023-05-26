@@ -43,6 +43,8 @@ export const NavigationGrid = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
+  width: 100%;
+  
 `;
 
 export const TitleLink = styled(Link)`
