@@ -1,7 +1,6 @@
 import { Tile, Poster, Content, Title, Year, Tags, Tag, TagName, Rating, Star, Rate, Votes } from "./styled";
 import { img } from "../../core/apiCodes";
 import { Genres } from "../../features/movies/Genres";
-import { toMovie} from "../../core/App/routes"
 
 export const MovieTile = ({ movie, genres}) => {
     const genresMovie = Genres.filter((genre) => genres.includes(genre.id));
