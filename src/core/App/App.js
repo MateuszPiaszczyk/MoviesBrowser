@@ -9,12 +9,13 @@ export const App = () => (
   <>
     <Navigation />
     <Switch>
+    <Route path={toMovie({ movieId: ":movieId" })}>
+        <MovieDetails />
+      </Route>
       <Route path={toMovies()}>
         <MoviesList />
       </Route>
-      <Route path={toMovie({ movieId: ":movieId" })}>
-        <MovieDetails />
-      </Route>
+
       <Route path={toPeople()}>
         <PeopleList />
       </Route>
