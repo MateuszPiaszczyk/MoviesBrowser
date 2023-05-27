@@ -36,16 +36,3 @@ export const GenresDetails = ({ genres }) => {
   );
 };
 
-export const GenresPerson = ({ genres }) => {
-  const genresId = useSelector(selectPersonGenres);
-
-  return (
-    genres && (
-      <Wrapper>
-        {getNames(genres, genresId).map((genre) => (
-          <Genre key={genre}>{genre}</Genre>
-        ))}
-      </Wrapper>
-    )
-  );
-};
