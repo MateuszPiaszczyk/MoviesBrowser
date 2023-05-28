@@ -6,24 +6,27 @@ import { MainHeader } from "../../../common/MainHeader";
 import { ErrorPage } from "../../../common/ErrorPage";
 import { MovieDetailsTile } from "../../../common/DetailsTiles";
 import { Loading } from "../../../common/Loading";
-import { Backdrop } from "./Background";
+import { Backdrop } from "./Backdrop";
 import { Subtitle } from "../../../common/Title";
 import { PersonTile } from "../../../common/PersonTile";
 import { List, Item } from "./styled";
-import { NoResult} from "../../../common/NoResult"
+import { NoResult} from "../../../common/NoResult";
 
 export const MovieDetails = () => {
   const dispatch = useDispatch();
-  const { movieId } = useParams();
+  const { id } = useParams();
+
+  useEffect(() => {
+    dispatch(getMovieId({ movieId: id }));
+  }, [dispatch, id]);
+
   const movieDetails = useSelector((state) => selectMovieState(state));
   const cast = useSelector((state) => selectCast(state));
   const crew = useSelector((state) => selectCrew(state));
   const status = useSelector((state) => selectStatus(state));
+  const details = useSelector(selectDetails);
 
-
-  useEffect(() => {
-    dispatch(fetchMovieDetails({ id: movieId }));
-  }, [movieId, dispatch]);
+  
   
   if (status === "loading") {
     return <Loading />;
@@ -36,13 +39,16 @@ if (status === "noresult") {
 }
   return (
 <>
-{movieDetails && movieDetails.backdrop_path &&
-                <Backdrop
-                    title={movieDetails.original_title}
-                    background={movieDetails.backdrop_path}
-                    vote={movieDetails.vote_average}
-                    votes={movieDetails.vote_count}
-                />}
+{details.backdrop_path && (
+<Backdrop 
+background={details.backdrop_path}
+title={details.original_title}
+vote={details.vote_average}
+votes={details.vote_count}
+/>
+)}
+
 </>
   )
 }
+

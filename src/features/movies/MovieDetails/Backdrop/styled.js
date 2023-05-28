@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const BackdropWrapper = styled.div`
   justify-content: center;
   animation: eclipse 0.75s ease-in-out;
@@ -48,3 +49,4 @@ height: 100%;
 inset: 0;
 aspect-ratio: 16 / 9;
 `;
+
