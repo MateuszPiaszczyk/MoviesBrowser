@@ -47,7 +47,21 @@ vote={details.vote_average}
 votes={details.vote_count}
 />
 )}
-
+<MainHeader>
+  <>
+  <MovieDetailsTile
+              poster={details.poster_path}
+              title={details.original_title}
+              year={details.release_date}
+              genres={details.genres}
+              vote={details.vote_average}
+              votes={details.vote_count}
+              overview={details.overview}
+              production={details.production_countries}
+              release={details.release_date}
+            />
+  </>
+</MainHeader>
 </>
   )
 }
