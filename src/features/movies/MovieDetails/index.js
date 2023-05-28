@@ -18,7 +18,7 @@ export const MovieDetails = () => {
 
   useEffect(() => {
     dispatch(getMovieId({ movieId: id }));
-  }, [dispatch, id]);
+  }, [id, dispatch]);
 
   const movieDetails = useSelector((state) => selectMovieState(state));
   const cast = useSelector((state) => selectCast(state));
