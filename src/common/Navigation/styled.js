@@ -24,8 +24,8 @@ export const StyledNavigation = styled.nav`
   width: 100%;
   padding: 22px 16px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-    padding: 16px 10px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    padding: 16px 9px;
   }
 `;
 
@@ -34,15 +34,17 @@ export const NavigationGrid = styled.div`
   gap: 16px;
   grid-template-columns: 1fr auto;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileVertical}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     width: 100%;
     grid-template-columns: 1fr;
-    gap: 24px;
+    
   }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
+  width: 100%;
+  
 `;
 
 export const TitleLink = styled(Link)`
@@ -78,8 +80,18 @@ export const NavigationList = styled.ul`
   align-items: center;
   gap: 15px;
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+    padding: 10px;
+    gap: 0;
+  }
 `;
 
 export const NavigationItem = styled.li`
   flex-grow: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+    padding: 0;
+    font-size: 12px;
+  }
 `;

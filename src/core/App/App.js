@@ -16,11 +16,9 @@ export const App = () => (
       <Route path={toMovies()}>
         <MoviesList />
       </Route>
-
       <Route path={toPeople()}>
         <PeopleList />
       </Route>
-      <Route path={toPerson()}>test</Route>
       <Route path="/">
         <Redirect to={toMovies()} />
       </Route>
