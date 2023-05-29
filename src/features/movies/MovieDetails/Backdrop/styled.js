@@ -28,7 +28,7 @@ export const BackdropBody = styled.div`
   `;
 
 export const Title = styled.h1`
-color: ${({ theme }) => theme.color.white};
+color: ${({ theme }) => theme.colors.white};
 font-size: 64px;
 font-weight: 600;
 line-height: 1.2;

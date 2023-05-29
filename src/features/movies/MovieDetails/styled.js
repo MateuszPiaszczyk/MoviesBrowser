@@ -11,3 +11,6 @@ export const List = styled.ul`
 export const Item = styled.li`
 transition: transform 0.15s ease-out;
 `;
+
+export const SingleMovieContainer = styled.main`
+`

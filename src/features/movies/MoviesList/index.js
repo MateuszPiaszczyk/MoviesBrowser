@@ -15,6 +15,7 @@ import { pageQueryParamName, searchQueryParamName } from "../../../searchQueryPa
 
 export const MoviesList = () => {
   const dispatch = useDispatch();
+  
   const status = useSelector(selectStatus);
   const popularMovies = useSelector(selectPopularMovies);
   const pageNumber = useSelector(selectPage);

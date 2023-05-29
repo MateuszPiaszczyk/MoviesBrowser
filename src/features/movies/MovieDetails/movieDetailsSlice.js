@@ -16,14 +16,13 @@ const movieDetailsSlice = createSlice({
     fetchMovieDetailsError: (state) => {
       state.status = "error";
     },
-    getMovieId: (state, { payload }) => {
+    getMovieId: (state, { payload: id }) => {
       state.status = "loading";
-      state.movieId = payload.movieId;
+      state.movieId = id;
     },
   },
 });
 export const {
-  fetchMovieDetails,
   fetchMovieDetailsSuccess,
   fetchMovieDetailsError,
   getMovieId,

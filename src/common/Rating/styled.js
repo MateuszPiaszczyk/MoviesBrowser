@@ -32,7 +32,7 @@ export const Star = styled(star)`
 `;
 
 export const BackdropRatingWrapper = styled.div`
-  color: ${({ theme }) => theme.color.white};
+  color: ${({ theme }) => theme.colors.white};
   display: inline-grid;
   grid-template-columns: auto auto auto auto;
   font-size: 16px;

@@ -37,4 +37,5 @@ export const selectPopularPeopleStatus = (state) =>
 export const selectPopularPeopleList = (state) =>
   selectStatePopularPeople(state).popularPeopleList;
 export const selectPeoplePage = (state) => selectStatePopularPeople(state).page;
+
 export default popularPeopleSlice.reducer;
