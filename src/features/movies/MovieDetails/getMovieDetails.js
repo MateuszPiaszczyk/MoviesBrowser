@@ -1,12 +1,34 @@
-import { key, url, apiMovieDetails } from "../../../core/apiCodes";
+import axios from "axios";
+import { key, url } from "../../../core/apiCodes";
 
 export const getMovieDetails = async (movieId) => {
-    const response = await fetch(
-      `${url}${apiMovieDetails}${movieId}?api_key=${key}`
+  console.log("getMovieDetails movieId:", movieId);
+  try {
+    const response = await axios.get(
+      `${url}/movie/${movieId}?api_key=${key}&language=en-US`
     );
-    if (!response.ok) {
-      throw new Error("Not found movies.");
+    if (response.status !== 200) {
+      throw new Error(response.data.status_message);
     }
-    const data = await response.json()
-    return data;
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
   }
+};
+
+export const getMovieCredits = async (movieId) => {
+  console.log("getMovieCredits movieId:", movieId);
+  try {
+    const response = await axios.get(
+      `${url}/movie/${movieId}/credits?api_key=${key}&language=en-US`
+    );
+    if (response.status !== 200) {
+      throw new Error(response.data.status_message);
+    }
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
