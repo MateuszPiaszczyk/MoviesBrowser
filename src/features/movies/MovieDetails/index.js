@@ -20,7 +20,7 @@ export const MovieDetails = () => {
     dispatch(getMovieId({ movieId: id }));
   }, [id, dispatch]);
 
-  const movieDetails = useSelector((state) => selectMovieState(state));
+  const movieDetails = useSelector(selectMovieState);
   const cast = useSelector((state) => selectCast(state));
   const crew = useSelector((state) => selectCrew(state));
   const status = useSelector((state) => selectStatus(state));
