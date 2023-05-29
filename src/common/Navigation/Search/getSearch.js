@@ -1,7 +1,7 @@
-import { key, url } from "../../../core/apiCodes";
+import { API_KEY, API_URL } from "../../../core/apiCodes";
 export const searchMovie = async ({ query, page }) => {
     const response = await fetch(
-      `${url}/search/movie?api_key=${key}&language=en-US&query=${query}&page=${page}&include_adult=false`
+      `${API_URL}/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=${page}&include_adult=false`
     );
     if (!response.ok) {
       new Error(response.statusText);

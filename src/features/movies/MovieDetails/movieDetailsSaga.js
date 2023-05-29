@@ -4,9 +4,9 @@ import { getMovieDetails, getMovieCredits } from "./getMovieDetails";
 
 function* fetchMovieDetailsHandler() {
   try {
-    const id = yield select(selectMovieId);
-    const details = yield call(getMovieDetails, { movieId: id });
-    const credits = yield call(getMovieCredits, { movieId: id });
+    const movieId = yield select(selectMovieId);
+    const details = yield call(getMovieDetails, { movieId: movieId });
+    const credits = yield call(getMovieCredits, { movieId: movieId });
     yield put(fetchMovieDetailsSuccess({ details, credits }));
   } catch (error) {
     yield put(fetchMovieDetailsError());

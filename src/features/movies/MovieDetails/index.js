@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getMovieId, selectCast, selectCrew, selectDetails, selectStatus } from "./movieDetailsSlice";
+import {fetchMovieDetails, fetchMovieDetailsError ,getMovieId, selectCast, selectCrew, selectDetails, selectStatus } from "./movieDetailsSlice";
 import { MainHeader } from "../../../common/MainHeader";
 import { ErrorPage } from "../../../common/ErrorPage";
 import { MovieDetailsTile } from "../../../common/DetailsTiles";
@@ -13,16 +13,28 @@ import { List, Item } from "./styled";
 
 export const MovieDetails = () => {
   const dispatch = useDispatch();
-  const  {id }  = useParams();
-
-  useEffect(() => {
-    dispatch(getMovieId({ movieId: id}));
-  }, [id]);
-
+  const {movieId} = useParams();
   const details = useSelector(selectDetails);
   const cast = useSelector(selectCast);
   const crew = useSelector(selectCrew);
   const status = useSelector(selectStatus);
+
+  useEffect(() => {
+    console.log("movieId:", movieId);
+    const fetchData = async () => {
+      try {
+        dispatch(getMovieId({movieId: movieId})); 
+        dispatch(fetchMovieDetails()); 
+      } catch (error) {
+        console.error(error);
+        dispatch(fetchMovieDetailsError());
+      }
+    };
+
+
+    fetchData();
+  }, [movieId, dispatch]);
+
   
 
   return (
