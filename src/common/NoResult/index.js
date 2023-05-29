@@ -1,5 +1,6 @@
-import { Wrapper, NoResultIcon } from "./styled";
-import { Container } from "../Container";
+import { Container } from "../Container/styled";
+import { Wrapper, NoResultIcon, Message } from "./styled";
+
 
 export const NoResult = () => (
   <Container>

@@ -1,3 +1,8 @@
+import { useSelector } from "react-redux";
+import { selectGenres } from "../MoviesList/popularMoviesSlice";
+import { Wrapper, Genre } from "./styled";
+import { getNames, extractNames } from "./utils";
+
 export const Genres = [
   {"id":28,"name":"Action"},
   {"id":12,"name":"Adventure"},
@@ -19,3 +24,15 @@ export const Genres = [
   {"id":10752,"name":"War"},
   {"id":37,"name":"Western"}
 ];
+
+export const GenresDetails = ({ genres }) => {
+  return (
+    genres && (
+      <Wrapper details>
+        {extractNames(genres).map((genre) => (
+          <Genre details key={genre}>{genre}</Genre>
+        ))}
+      </Wrapper>
+    )
+  );
+};
