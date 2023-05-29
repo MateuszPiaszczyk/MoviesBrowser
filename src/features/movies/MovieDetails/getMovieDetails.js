@@ -1,22 +1,19 @@
-import axios from "axios";
- const URL = `https://api.themoviedb.org/3`;
- const API_KEY = "ae7d4af255a05506e1ed3b49e48b0d5c";
+import { key, url, apiMovieDetails } from "../../../core/apiCodes";
 
-
- export const getMovieDetails = async (movieId) => {
-  const response = await axios.get(`
-  ${URL}/movie/${movieId}?api_key=${API_KEY}&language=en-US`
+export const getMovieDetails = async (movieId) => {
+  const response = await fetch(`${url}/${apiMovieDetails}${movieId}?api_key=${key}&language=en-US`
   );
   if (!response.ok) {
-   new Error(response.statusText);
+    throw new Error("Not found movies.");
   }
-return await response.data
-  };
+  const data = await response.json()
+  return data;
+}
 
 
   export const getMovieCredits = async (movieId) => {
-    const response = await axios.get(`
-    ${URL}/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`
+    const response = await fetch(`
+    ${url}/${apiMovieDetails}/${movieId.id}/credits?api_key=${key}&language=en-US`
     );
     if (!response.ok) {
     throw new Error(response.statusText);

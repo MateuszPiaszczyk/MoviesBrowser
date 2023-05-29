@@ -13,7 +13,7 @@ import { List, Item } from "./styled";
 
 export const MovieDetails = () => {
   const dispatch = useDispatch();
-  const  id  = useParams();
+  const  {id }  = useParams();
 
   useEffect(() => {
     dispatch(getMovieId({ movieId: id}));
