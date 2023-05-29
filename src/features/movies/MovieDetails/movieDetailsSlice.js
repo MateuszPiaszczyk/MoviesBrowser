@@ -1,39 +1,44 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 const movieDetailsSlice = createSlice({
   name: "movieDetails",
   initialState: {
-    movieInfo: null,
-    status: null,
+    status: "loading",
+    movieId: 0,
+    credits: [],
+    details: {},
+    cast: [],
+    crew: [],
   },
-
   reducers: {
-    fetchMovieDetails: (_, { payload: movieId }) => ({
-      movieInfo: "loading",
-      status: null,
-      movieId,
-    }),
-    fetchMovieDetailsSuccess: (_, { payload: movieInfo }) => ({
-      status: "success",
-      movieInfo,
-    }),
-    fetchMovieDetailsError: () => ({
-      movieInfo: null,
-      status: "error",
-    }),
+    fetchMovieDetails: (state) => {
+      state.status = "loading";
+    },
+    fetchMovieDetailsSuccess: (state, action) => {
+      state.status = "success";
+      state.details = action.payload.details;
+      state.credits = action.payload.credits;
+    },
+    fetchMovieDetailsError: (state) => {
+      state.status = "error";
+    },
+    getMovieId: (state, action) => {
+      console.log("movieId payload:", action.payload)
+      state.movieId = action.payload;
+    },
   },
 });
-
 export const {
   fetchMovieDetails,
   fetchMovieDetailsSuccess,
   fetchMovieDetailsError,
+  getMovieId,
 } = movieDetailsSlice.actions;
-
-export const selectMovieDetails = (state) => state.movieDetails;
-export const selectMovieDetailsStatus = (state) =>
-  selectMovieDetails(state).status;
-export const selectMovieInfo = (state) => selectMovieDetails(state).movieInfo;
-export const selectError = (state) => selectMovieDetails(state).error;
-
+export const selectMovieState = (state) => state.movieDetails;
+export const selectStatus = (state) => selectMovieState(state).status;
+export const selectDetails = (state) => selectMovieState(state).details;
+export const selectCredits = (state) => selectMovieState(state).credits;
+export const selectMovieId = (state) => selectMovieState(state).movieId;
+export const selectCrew = (state) => selectMovieState(state).crew;
+export const selectCast = (state) => selectMovieState(state).cast;
+export const selectMovie = (state) => selectMovieState(state).movie;
 export default movieDetailsSlice.reducer;

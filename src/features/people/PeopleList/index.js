@@ -32,7 +32,7 @@ export const PeopleList = () => {
             </ListItem>
           ))}
         </List>
-        <Pagination />
+        <Pagination  />
       </Container>
     );
   }

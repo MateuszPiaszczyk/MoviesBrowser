@@ -216,13 +216,43 @@ export const Votes = styled.div`
     color: ${({ theme }) => theme.colors.waterloo};
     line-height: 1.5;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
-        font-size: 14px;
-        line-height: 1.3;
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+`;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-        font-size: 12px;
-        line-height: 1.3;
-    }
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.woodsmoke};
+  display: block;
+  height: 100%;
+  &:hover article > div:first-child {
+    opacity: 0.7;
+  }
+`;
+
+export const Movie = styled.article`
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  padding: 16px;
+  background-color: ${({ theme }) => theme.colors.white};
+  box-shadow: ${({ theme }) => theme.shadow};
+  border-radius: 5px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
+export const MovieDescription = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}) {
+    height: auto;
+    justify-content: flex-start;
+  }
 `;

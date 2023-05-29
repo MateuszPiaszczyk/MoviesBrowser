@@ -1,22 +1,18 @@
-import { takeLatest, delay, call, put } from "redux-saga/effects";
-import {
-  fetchMovieDetails,
-  fetchMovieDetailsSuccess,
-  fetchMovieDetailsError,
-} from "./movieDetailsSlice";
-import { getMovieDetails } from "./getMovieDetails";
+import { takeLatest, select, call, put } from "redux-saga/effects";
+import {selectMovieId, getMovieId, fetchMovieDetailsError, fetchMovieDetailsSuccess} from "./movieDetailsSlice";
+import { getMovieDetails, getMovieCredits } from "./getMovieDetails";
 
-function* fetchMovieDetailsHandler({ payload }) {
+function* fetchMovieDetailsHandler() {
   try {
-    const movieInfo = yield call(getMovieDetails, payload);
-    yield delay(1000);
-    yield put(fetchMovieDetailsSuccess(movieInfo));
+    const movieId = yield select(selectMovieId);
+    const details = yield call(getMovieDetails, { movieId: movieId });
+    const credits = yield call(getMovieCredits, { movieId: movieId });
+    yield put(fetchMovieDetailsSuccess({ details, credits }));
   } catch (error) {
     yield put(fetchMovieDetailsError());
-    yield call(alert, "Download failed");
   }
 }
 
 export function* movieDetailsSaga() {
-  yield takeLatest(fetchMovieDetails.type, fetchMovieDetailsHandler);
+  yield takeLatest(getMovieId.type, fetchMovieDetailsHandler);
 }

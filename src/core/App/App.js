@@ -1,4 +1,4 @@
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch, HashRouter } from "react-router-dom";
 import { Navigation } from "../../common/Navigation";
 import { MoviesList } from "../../features/movies/MoviesList";
 import { PeopleList } from "../../features/people/PeopleList";
@@ -7,15 +7,15 @@ import { toMovie, toMovies, toPeople, toPerson } from "./routes";
 
 export const App = () => (
   <>
+  <HashRouter>
     <Navigation />
     <Switch>
-      <Route path={toMovie({ movieId: ":movieId" })}>
+    <Route path={toMovie()}>
         <MovieDetails />
       </Route>
       <Route path={toMovies()}>
         <MoviesList />
       </Route>
-      <Route path={toPerson()}></Route>
       <Route path={toPeople()}>
         <PeopleList />
       </Route>
@@ -23,5 +23,7 @@ export const App = () => (
         <Redirect to={toMovies()} />
       </Route>
     </Switch>
+    </HashRouter>
   </>
+  
 );
