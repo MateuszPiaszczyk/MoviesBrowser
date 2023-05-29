@@ -3,37 +3,45 @@ import { createSlice } from "@reduxjs/toolkit";
 const movieDetailsSlice = createSlice({
   name: "movieDetails",
   initialState: {
-    movieInfo: null,
-    status: null,
+    status: "idle",
+    movieId: 0,
+    credits: [],
+    details: {},
+    cast: [],
+    crew: [],
   },
-
   reducers: {
-    fetchMovieDetails: (_, { payload: movieId }) => ({
-      movieInfo: "loading",
-      status: null,
-      movieId,
-    }),
-    fetchMovieDetailsSuccess: (_, { payload: movieInfo }) => ({
-      status: "success",
-      movieInfo,
-    }),
-    fetchMovieDetailsError: () => ({
-      movieInfo: null,
-      status: "error",
-    }),
+    getMovieId: (state, action) => {
+      console.log("movieId payload:", action.payload)
+      state.movieId = action.payload;
+    },
+    fetchMovieDetails: (state) => {
+      state.status = "loading";
+    },
+    fetchMovieDetailsSuccess: (state, action) => {
+      state.status = "success";
+      state.details = action.payload.details;
+      state.credits = action.payload.credits;
+    },
+    fetchMovieDetailsError: (state) => {
+      state.status = "error";
+    },
   },
 });
 
 export const {
+  getMovieId,
   fetchMovieDetails,
   fetchMovieDetailsSuccess,
   fetchMovieDetailsError,
 } = movieDetailsSlice.actions;
 
-export const selectMovieDetails = (state) => state.movieDetails;
-export const selectMovieDetailsStatus = (state) =>
-  selectMovieDetails(state).status;
-export const selectMovieInfo = (state) => selectMovieDetails(state).movieInfo;
-export const selectError = (state) => selectMovieDetails(state).error;
+export const selectMovieState = (state) => state.movieDetails;
+export const selectStatus = (state) => selectMovieState(state).status;
+export const selectDetails = (state) => selectMovieState(state).details;
+export const selectCredits = (state) => selectMovieState(state).credits;
+export const selectMovieId = (state) => selectMovieState(state).movieId;
+export const selectCast = (state) => selectMovieState(state).cast;
+export const selectCrew = (state) => selectMovieState(state).crew;
 
 export default movieDetailsSlice.reducer;
