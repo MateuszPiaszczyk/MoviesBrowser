@@ -1,7 +1,13 @@
 import { MainPersonTile } from "./MainPersonTile";
+import { MainHeader } from "../../../common/MainHeader";
+import { Container } from "../../../common/Container/styled";
 
 export const PersonPage = () => {
     return (
-        <MainPersonTile />
+        <Container>
+            <MainPersonTile />
+            <MainHeader title="Movies - cast (4)" />
+            <MainHeader title="Movies - crew (4)" />
+        </Container>
     )
 };

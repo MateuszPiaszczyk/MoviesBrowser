@@ -13,7 +13,6 @@ import personPhoto from "../../../../common/img/person.png";
 
 export const MainPersonTile = () => {
     return (
-        <Container>
             <PersonTileWrapper>
                 <PersonPhoto src={personPhoto} />
                 <PersonData>
@@ -29,8 +28,6 @@ export const MainPersonTile = () => {
                 </PersonData>
                 <Biography>Liu Yifei was born in Wuhan, Hubei, Province of China on August 25th, 1987. She began modeling at the age of 8 and was trained in singing, dancing and the piano. Moving to the United States at 10 with her mother, Liu lived there for four years.</Biography>
             </PersonTileWrapper>
-        </Container>
-
     );
 };
 
