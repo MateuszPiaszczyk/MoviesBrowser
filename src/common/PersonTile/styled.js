@@ -18,9 +18,9 @@ export const Tile = styled.div`
     box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.waterloo};
   }
   
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
-        grid-template-columns: auto 1fr; 
-        width: 330px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        grid-template-rows: auto 1fr; 
+        
     }
 `;
 
