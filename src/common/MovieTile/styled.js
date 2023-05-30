@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../common/img/star.svg";
-import noPoster from "../img/no-poster.svg"
+import { ReactComponent as noPoster } from "../img/no-poster.svg"
 import { Link } from "react-router-dom";
 
 export const Tile = styled.div`
