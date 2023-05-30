@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import noPhoto from "../img/no-photo.svg";
+import { ReactComponent as noPhoto } from "../img/no-photo.svg";
 
 export const Tile = styled.div`
     background-color: ${({ theme }) => theme.colors.white};
