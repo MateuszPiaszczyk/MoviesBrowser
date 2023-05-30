@@ -6,11 +6,12 @@ import {
 } from "./popularPeopleSlice";
 import { useEffect } from "react";
 import { MainHeader } from "../../../common/MainHeader";
-import { List, ListItem } from "./styled";
+import { List, ListItem, StyledLink } from "./styled";
 import { Container } from "../../../common/Container/styled";
 import { PersonTile } from "../../../common/PersonTile";
 import { ErrorPage } from "../../../common/ErrorPage";
 import { Pagination } from "../../../common/Pagination";
+import { toPerson } from "../../../core/App/routes";
 
 export const PeopleList = () => {
   const dispatch = useDispatch();
@@ -28,11 +29,13 @@ export const PeopleList = () => {
         <List>
           {fetchResult.results.map((person) => (
             <ListItem key={person.id}>
-              <PersonTile person={person} />
+              <StyledLink to={toPerson({ personId: person.id })}>
+                <PersonTile person={person} />
+              </StyledLink>
             </ListItem>
           ))}
         </List>
-        <Pagination  />
+        <Pagination />
       </Container>
     );
   }

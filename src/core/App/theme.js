@@ -9,6 +9,7 @@ export const theme = {
         scienceBlue: "#0044CC",
         pattensBlue: "#D6E4FF",
         silver: "#C4C4C4",
+        stormGrey: "#74788B",
         mine: "#333333"
     },
 

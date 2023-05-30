@@ -4,6 +4,7 @@ import { MoviesList } from "../../features/movies/MoviesList";
 import { PeopleList } from "../../features/people/PeopleList";
 import { MovieDetails } from "../../features/movies/MovieDetails";
 import { toMovie, toMovies, toPeople, toPerson } from "./routes";
+import { PersonPage } from "../../features/people/PersonPage";
 
 export const App = () => (
   <>
@@ -15,6 +16,9 @@ export const App = () => (
       </Route>
       <Route path={toMovies()}>
         <MoviesList />
+      </Route>
+      <Route path={toPerson()}>
+        <PersonPage />
       </Route>
       <Route path={toPeople()}>
         <PeopleList />
