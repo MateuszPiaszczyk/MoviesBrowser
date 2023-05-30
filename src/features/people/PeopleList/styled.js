@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const List = styled.ul`
   display: grid;
@@ -22,3 +23,8 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li``;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.woodsmoke};
+`;
