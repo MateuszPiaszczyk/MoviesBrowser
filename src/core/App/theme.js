@@ -10,7 +10,8 @@ export const theme = {
         pattensBlue: "#D6E4FF",
         silver: "#C4C4C4",
         stormGrey: "#74788B",
-        mine: "#333333"
+        mine: "#333333",
+        shadow: "0px 4px 12px rgba(186, 199, 213, 0.5)",
     },
 
     breakpoint: {

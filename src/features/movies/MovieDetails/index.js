@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {fetchMovieDetails, fetchMovieDetailsError ,getMovieId, selectCast, selectCrew, selectDetails, selectStatus } from "./movieDetailsSlice";
-import { MainHeader } from "../../../common/MainHeader";
+import {getMovieId, selectCast, selectCrew, selectDetails, selectStatus } from "./movieDetailsSlice";
+import { MainContainer } from "../../../common/Container";
 import { ErrorPage } from "../../../common/ErrorPage";
 import { MovieDetailsTile } from "../../../common/DetailsTiles";
 import { Loading } from "../../../common/Loading";
@@ -10,6 +10,7 @@ import { Backdrop } from "./Backdrop";
 import { Subtitle } from "../../../common/Title";
 import { PersonTile } from "../../../common/PersonTile";
 import { List, Item } from "./styled";
+import { PersonCastTile } from "../../../common/PersonTile";
 
 export const MovieDetails = () => {
   const dispatch = useDispatch();
@@ -20,19 +21,7 @@ export const MovieDetails = () => {
   const status = useSelector(selectStatus);
 
   useEffect(() => {
-    console.log("movieId:", movieId);
-    const fetchData = async () => {
-      try {
-        dispatch(getMovieId({movieId: movieId})); 
-        dispatch(fetchMovieDetails()); 
-      } catch (error) {
-        console.error(error);
-        dispatch(fetchMovieDetailsError());
-      }
-    };
-
-
-    fetchData();
+        dispatch(getMovieId({movieId: movieId}));
   }, [movieId, dispatch]);
 
   
@@ -52,7 +41,7 @@ export const MovieDetails = () => {
         />
       )}
 
-      <MainHeader
+      <MainContainer
         content={
           <>
             <MovieDetailsTile
@@ -72,7 +61,7 @@ export const MovieDetails = () => {
                 <List>
                   {cast.map((person) => (
                     <Item key={person.credit_id}>
-                      <PersonTile
+                      <PersonCastTile
                         id={person.id}
                         name={person.name}
                         role={person.character}
@@ -89,7 +78,7 @@ export const MovieDetails = () => {
                 <List>
                   {crew.map((person) => (
                     <Item key={person.credit_id}>
-                      <PersonTile
+                      <PersonCastTile
                         id={person.id}
                         name={person.name}
                         role={person.job}
