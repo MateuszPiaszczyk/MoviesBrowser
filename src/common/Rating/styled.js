@@ -10,6 +10,12 @@ export const Wrapper = styled.div`
   font-size: 16px;
   height: 100%;
   align-content: flex-end;
+
+  @media (max-width: ${({ theme}) => theme.breakpoint.fullPage}px) {
+    height: auto;
+    gap: 7px;
+    font-size: 13px;
+  }
   `;
 
 export const Vote = styled.span`
@@ -18,7 +24,7 @@ font-weight: bold;
 `;
 
 export const Votes = styled.span`
-  color: ${({ theme }) => theme.color.waterloo};
+  color: ${({ theme }) => theme.colors.waterloo};
 `;
 
 export const Star = styled(star)`
@@ -29,6 +35,15 @@ export const Star = styled(star)`
   backdrop && css`
   height: 40px;
   `}
+  @media (max-width: ${({ theme}) => theme.breakpoint.mobileMax}px) {
+    ${({backdrop}) =>
+      backdrop && css`
+      height: 25px;
+      `}
+  }
+  @media (max-width: ${({ theme}) => theme.breakpoint.fullPage}px) {
+    height:16px;
+  }
 `;
 
 export const BackdropRatingWrapper = styled.div`
@@ -39,6 +54,11 @@ export const BackdropRatingWrapper = styled.div`
   line-height: 1.2;
   grid-gap: 16px 8px;
   align-items: center;
+
+  @media (max-width: ${({ theme}) => theme.breakpoint.mobileMax}px) {
+    font-size: 14px;
+    margin: 12px 0 4px;
+  }
   `;
 
 export const DetailsRatingWrapper = styled.div`
@@ -48,16 +68,38 @@ line-height: 1.2;
 gap: 8px;
 align-items: center;
 margin: 24px 0;
+
+@media (max-width: ${({theme }) => theme.breakpoint.mobileMax}px) {
+  margin: 12px 0 4px;
+}
 `;
 
 export const Average = styled.span`
   font-weight: 500;
   font-size: 22px;
   line-height: 1.3;
+
+  ${({ backdrop }) =>
+    backdrop &&
+    css`
+      font-size: 30px;
+    `}
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    ${({ backdrop }) =>
+      backdrop &&
+      css`
+        font-size: 22px;
+      `}
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    font-size: 13px;
+  }
   `;
 
 export const Total = styled.span`
-@media (max-width: ${({ theme }) => theme.breakpoint.small}) {
+@media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
   ${({ backdrop }) =>
     !backdrop &&
     css`
@@ -68,9 +110,21 @@ export const Total = styled.span`
 
 export const Count = styled.span`
 margin-right: 4px;
+
 ${({ backdrop }) =>
   backdrop &&
   css`
     grid-area: 2 / 1 / 3 / 4;
   `}
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    font-size: 13px;
+    line-height: 1.3;
+    color: ${({ theme }) => theme.colors.waterloo};
+    ${({ backdrop }) =>
+      backdrop &&
+      css`
+        grid-area: auto / auto / auto / auto;
+        color: ${({ theme }) => theme.colors.white};
+      `}
+  }
   `;

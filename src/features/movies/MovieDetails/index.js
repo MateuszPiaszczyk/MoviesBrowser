@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {fetchMovieDetails, fetchMovieDetailsError ,getMovieId, selectCast, selectCrew, selectDetails, selectStatus } from "./movieDetailsSlice";
-import { MainHeader } from "../../../common/MainHeader";
+import { MainContainer } from "../../../common/Container";
 import { ErrorPage } from "../../../common/ErrorPage";
 import { MovieDetailsTile } from "../../../common/DetailsTiles";
 import { Loading } from "../../../common/Loading";
@@ -20,19 +20,7 @@ export const MovieDetails = () => {
   const status = useSelector(selectStatus);
 
   useEffect(() => {
-    console.log("movieId:", movieId);
-    const fetchData = async () => {
-      try {
-        dispatch(getMovieId({movieId: movieId})); 
-        dispatch(fetchMovieDetails()); 
-      } catch (error) {
-        console.error(error);
-        dispatch(fetchMovieDetailsError());
-      }
-    };
-
-
-    fetchData();
+        dispatch(getMovieId({movieId: movieId}));
   }, [movieId, dispatch]);
 
   
@@ -52,7 +40,7 @@ export const MovieDetails = () => {
         />
       )}
 
-      <MainHeader
+      <MainContainer
         content={
           <>
             <MovieDetailsTile
