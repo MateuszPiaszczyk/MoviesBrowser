@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/MoviesBrowser/static/js/main.207f9253.js",
+    "main.js": "/MoviesBrowser/static/js/main.a4bf7fd8.js",
     "static/js/787.94542015.chunk.js": "/MoviesBrowser/static/js/787.94542015.chunk.js",
     "static/media/person.png": "/MoviesBrowser/static/media/person.926a9fad8e00bf8fec17.png",
-    "static/media/noResult.svg": "/MoviesBrowser/static/media/noResult.b110c7513b9bca95ffcd30f448b2b0af.svg",
-    "static/media/star.svg": "/MoviesBrowser/static/media/star.291f146da8ec732e66d3333dc945ea1b.svg",
-    "static/media/no-photo.svg": "/MoviesBrowser/static/media/no-photo.5414a8378899be62302cc85f547bf056.svg",
-    "static/media/error.svg": "/MoviesBrowser/static/media/error.1a50ec90bf2543fe78aca794450d3b21.svg",
-    "static/media/no-poster.svg": "/MoviesBrowser/static/media/no-poster.09e98977e1f2ccf6bea4bd25a4d25066.svg",
+    "static/media/noResult.svg": "/MoviesBrowser/static/media/noResult.15adf16973757e9b48d531f73b0e9072.svg",
+    "static/media/star.svg": "/MoviesBrowser/static/media/star.8663155c38d2739a01d98dddbf5d2ae1.svg",
+    "static/media/no-photo.svg": "/MoviesBrowser/static/media/no-photo.728d743c5d69c0423e4a4d616fed2561.svg",
+    "static/media/error.svg": "/MoviesBrowser/static/media/error.a514e9c64a76d5cf149bdd7443857605.svg",
+    "static/media/no-poster.svg": "/MoviesBrowser/static/media/no-poster.87199210264d45a12dfa2ed17bb09176.svg",
     "index.html": "/MoviesBrowser/index.html",
-    "static/media/camera.svg": "/MoviesBrowser/static/media/camera.0145d7ccb8121ccbae0e6568c339d97d.svg",
-    "static/media/spinner.svg": "/MoviesBrowser/static/media/spinner.17b2cd246403596367f2437ec95272ba.svg",
-    "static/media/search.svg": "/MoviesBrowser/static/media/search.85de5a0d327bbc4f6ec81ef70fb066e6.svg",
-    "main.207f9253.js.map": "/MoviesBrowser/static/js/main.207f9253.js.map",
+    "static/media/camera.svg": "/MoviesBrowser/static/media/camera.00c3c840657cf99140d2cc48a68fa8fc.svg",
+    "static/media/spinner.svg": "/MoviesBrowser/static/media/spinner.c5f29646f52eed97faa98a9f6f43ce08.svg",
+    "static/media/search.svg": "/MoviesBrowser/static/media/search.10c59026fee0a05b9776f9eb0569c0a3.svg",
+    "main.a4bf7fd8.js.map": "/MoviesBrowser/static/js/main.a4bf7fd8.js.map",
     "787.94542015.chunk.js.map": "/MoviesBrowser/static/js/787.94542015.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.207f9253.js"
+    "static/js/main.a4bf7fd8.js"
   ]
 }
