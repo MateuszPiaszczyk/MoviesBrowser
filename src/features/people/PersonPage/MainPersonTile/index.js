@@ -1,4 +1,4 @@
-import { img } from "../../../../core/apiCodes";
+import { IMG_URL } from "../../../../core/apiCodes";
 import {
     BasicInfo,
     PersonData,
@@ -14,7 +14,7 @@ import personPhoto from "../../../../common/img/person.png";
 export const MainPersonTile = ({ poster, name, birthday, birthplace, biography }) => {
     return (
         <PersonTileWrapper>
-            {poster && <PersonPhoto src={`${img}${poster}`} />}
+            {poster && <PersonPhoto src={`${IMG_URL}${poster}`} />}
             <PersonData>
                 <PersonName>{name}</PersonName>
                 {birthday && (
