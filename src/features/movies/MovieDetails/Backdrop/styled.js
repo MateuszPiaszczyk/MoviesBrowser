@@ -30,6 +30,7 @@ export const BackdropBody = styled.div`
   animation: reveal 2s ease-in-out 0.75s;
   animation-fill-mode: forwards;
   opacity: 0;
+  
 
   @keyframes reveal {
     100% {
@@ -55,10 +56,10 @@ export const BackdropContent = styled.div`
   position: absolute;
   left: 0;
   bottom: 0;
-  margin-bottom: 56px;
+  margin-bottom: 50px;
 
   @media ( max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   @media (max-width: ${({theme }) => theme.breakpoint.tablet}px) {
     margin-bottom: 10px;

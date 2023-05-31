@@ -242,7 +242,7 @@ export const Movie = styled.article`
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadow};
   border-radius: 5px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     grid-template-columns: repeat(2, 1fr);
   }
 `;
@@ -252,7 +252,7 @@ export const MovieDescription = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     height: auto;
     justify-content: flex-start;
   }

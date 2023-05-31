@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {fetchMovieDetails, fetchMovieDetailsError ,getMovieId, selectCast, selectCrew, selectDetails, selectStatus } from "./movieDetailsSlice";
+import {getMovieId, selectCast, selectCrew, selectDetails, selectStatus } from "./movieDetailsSlice";
 import { MainContainer } from "../../../common/Container";
 import { ErrorPage } from "../../../common/ErrorPage";
 import { MovieDetailsTile } from "../../../common/DetailsTiles";
@@ -10,6 +10,7 @@ import { Backdrop } from "./Backdrop";
 import { Subtitle } from "../../../common/Title";
 import { PersonTile } from "../../../common/PersonTile";
 import { List, Item } from "./styled";
+import { PersonCastTile } from "../../../common/PersonTile";
 
 export const MovieDetails = () => {
   const dispatch = useDispatch();
@@ -60,7 +61,7 @@ export const MovieDetails = () => {
                 <List>
                   {cast.map((person) => (
                     <Item key={person.credit_id}>
-                      <PersonTile
+                      <PersonCastTile
                         id={person.id}
                         name={person.name}
                         role={person.character}
@@ -77,7 +78,7 @@ export const MovieDetails = () => {
                 <List>
                   {crew.map((person) => (
                     <Item key={person.credit_id}>
-                      <PersonTile
+                      <PersonCastTile
                         id={person.id}
                         name={person.name}
                         role={person.job}

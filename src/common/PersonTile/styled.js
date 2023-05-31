@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { ReactComponent as noPhoto } from "../img/no-photo.svg";
+import { Link } from "react-router-dom";
 
 export const Tile = styled.div`
     background-color: ${({ theme }) => theme.colors.white};
@@ -68,5 +69,53 @@ export const Name = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     font-size: 14px;
+  }
+  ${({ list }) =>
+    list &&
+    css`
+      -webkit-line-clamp: 2;
+      max-height: 2.6em;
+    `}
+`;
+
+
+export const Person = styled.article`
+  padding: 16px;
+  background-color: ${({ theme }) => theme.color.white};
+  box-shadow: ${({ theme }) => theme.shadow};
+  border-radius: 5px;
+  text-align: center;
+  height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
+    padding: 8px;
+  }
+`;
+export const Role = styled.span`
+  color: ${({ theme }) => theme.color.waterloo};
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  max-height: 1.5em;
+  word-break: break-all;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
+    font-size: 13px;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.color.woodsmoke};
+  display: block;
+  height: 100%;
+
+  &:hover article > div:first-child {
+    opacity: 0.7;
   }
 `;

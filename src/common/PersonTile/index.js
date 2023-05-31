@@ -1,6 +1,8 @@
-import { Name, Photo, PhotoWrapper, Tile } from "./styled";
+import { Name, Photo, PhotoWrapper, Tile, StyledLink, Person, Role } from "./styled";
 import { img } from "../../core/apiCodes";
 import noPhoto from "../img/no-photo.svg";
+import {toPerson} from "../../core/App/routes";
+import { PersonImage } from "../Images";
 
 export const PersonTile = ({ person }) => {
     return (
@@ -17,3 +19,13 @@ export const PersonTile = ({ person }) => {
         </Tile>
     )
 };
+
+export const PersonCastTile = ({ name, role, poster, personId}) => (
+    <StyledLink to={toPerson({personId: personId})}>
+        <Person>
+            <PersonImage poster={poster} personId={personId} />
+            <Name>{name}</Name>
+            <Role>{role}</Role>
+        </Person>
+    </StyledLink>
+)
