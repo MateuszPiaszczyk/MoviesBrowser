@@ -1,5 +1,5 @@
 import { Name, Photo, PhotoWrapper, Tile } from "./styled";
-import { img } from "../../core/apiCodes";
+import { IMG_URL } from "../../core/apiCodes";
 import noPhoto from "../img/no-photo.svg";
 
 export const PersonTile = ({ person }) => {
@@ -7,7 +7,7 @@ export const PersonTile = ({ person }) => {
         <Tile>
             <PhotoWrapper>
                 {person.profile_path ? (
-                    <Photo src={`${img}${person.profile_path}`} alt={person.name} />
+                    <Photo src={`${IMG_URL}${person.profile_path}`} alt={person.name} />
                 ) : (
                     <img src={noPhoto} alt="Picture is not available" />
                 )}

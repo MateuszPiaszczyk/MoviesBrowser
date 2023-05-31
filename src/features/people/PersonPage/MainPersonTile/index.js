@@ -1,4 +1,4 @@
-import { Container } from "../../../../common/Container/styled";
+import { IMG_URL } from "../../../../core/apiCodes";
 import {
     BasicInfo,
     PersonData,
@@ -11,23 +11,27 @@ import {
 } from "./styled";
 import personPhoto from "../../../../common/img/person.png";
 
-export const MainPersonTile = () => {
+export const MainPersonTile = ({ poster, name, birthday, birthplace, biography }) => {
     return (
-            <PersonTileWrapper>
-                <PersonPhoto src={personPhoto} />
-                <PersonData>
-                    <PersonName>Liu Yifei</PersonName>
-                    <BasicInfo>
-                        <Birth>Date of birth: </Birth>
-                        <BirthDetails>25.08.1987 </BirthDetails>
-                    </BasicInfo>
-                    <BasicInfo>
-                        <Birth>Place of birth: </Birth>
-                        <BirthDetails>Wuhan, Hubei, China </BirthDetails>
-                    </BasicInfo>
-                </PersonData>
-                <Biography>Liu Yifei was born in Wuhan, Hubei, Province of China on August 25th, 1987. She began modeling at the age of 8 and was trained in singing, dancing and the piano. Moving to the United States at 10 with her mother, Liu lived there for four years.</Biography>
-            </PersonTileWrapper>
+        <PersonTileWrapper>
+            {poster && <PersonPhoto src={`${IMG_URL}${poster}`} />}
+            <PersonData>
+                <PersonName>{name}</PersonName>
+                {birthday && (
+                <BasicInfo>
+                    <Birth>Date of birth: </Birth>
+                    <BirthDetails>{birthday}</BirthDetails>
+                </BasicInfo>
+                )}
+                {birthplace && (
+                <BasicInfo>
+                    <Birth>Place of birth: </Birth>
+                    <BirthDetails>{birthplace}</BirthDetails>
+                </BasicInfo>
+                )}
+            </PersonData>
+            {biography && <Biography>{biography}</Biography>}
+        </PersonTileWrapper>
     );
 };
 
