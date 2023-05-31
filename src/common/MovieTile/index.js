@@ -1,5 +1,5 @@
 import { Tile, Poster, Content, Title, Year, Tags, Tag, TagName, Rating, Star, Rate, Votes, PosterWrapper } from "./styled";
-import { img } from "../../core/apiCodes";
+import { IMG_URL } from "../../core/apiCodes";
 import { Genres } from "../../features/movies/Genres";
 import noPoster from "../img/no-poster.svg";
 
@@ -9,7 +9,7 @@ export const MovieTile = ({ movie, genres }) => {
         <Tile>
             <PosterWrapper>
                 {movie.poster_path ? (
-                    <Poster src={`${img}${movie.poster_path}`} alt="movie poster" />
+                    <Poster src={`${IMG_URL}${movie.poster_path}`} alt="movie poster" />
                 ) : (
                     <img src={noPoster} alt="poster in not available" />
                 )}
