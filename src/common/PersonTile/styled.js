@@ -81,18 +81,18 @@ export const Name = styled.div`
 
 export const Person = styled.article`
   padding: 16px;
-  background-color: ${({ theme }) => theme.color.white};
+  background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadow};
   border-radius: 5px;
   text-align: center;
   height: 100%;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     padding: 8px;
   }
 `;
 export const Role = styled.span`
-  color: ${({ theme }) => theme.color.waterloo};
+  color: ${({ theme }) => theme.colors.waterloo};
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
@@ -104,7 +104,7 @@ export const Role = styled.span`
   max-height: 1.5em;
   word-break: break-all;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     font-size: 13px;
   }
 `;
