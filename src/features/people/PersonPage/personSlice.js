@@ -7,8 +7,6 @@ const personDetailsSlice = createSlice({
     personId: 0,
     credits: [],
     details: {},
-    cast: [],
-    crew: [],
   },
   reducers: {
     fetchPersonDetails: (state) => {
