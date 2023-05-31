@@ -6,7 +6,7 @@ import {
   fetchPersonDetailsError,
   getPersonId,
   selectCast,
-  selectCrew,
+  selectCredits,
   selectDetails,
   selectStatus
 } from "./personSlice";
@@ -15,30 +15,19 @@ import { MainHeader } from "../../../common/MainHeader";
 import { Container } from "../../../common/Container/styled";
 import { Loading } from "../../../common/Loading";
 import { ErrorPage } from "../../../common/ErrorPage";
-
+import { MovieTile } from "../../../common/MovieTile";
+import { Bottom, List, StyledLink } from "./styled";
+import { toMovie } from "../../../core/App/routes";
 
 export const PersonPage = () => {
   const dispatch = useDispatch();
   const { personId } = useParams();
-  const details = useSelector((state) => {
-    const details = selectDetails(state);
-    console.log("Details:", details); // Dodaj ten console.log
-    return details;
-  });
-  const cast = useSelector((state) => {
-    const cast = selectCast(state);
-    console.log("Cast:", cast); // Dodaj ten console.log
-    return cast;
-  });
-  const crew = useSelector((state) => {
-    const crew = selectCrew(state);
-    console.log("Crew:", crew); // Dodaj ten console.log
-    return crew;
-  });
+  const details = useSelector(selectDetails);
+  const cast = useSelector(selectCast);
+  const credits = useSelector(selectCredits);
   const status = useSelector(selectStatus);
 
   useEffect(() => {
-    console.log("personId:", personId);
     const fetchData = async () => {
       try {
         dispatch(getPersonId({ personId: personId }));
@@ -51,7 +40,7 @@ export const PersonPage = () => {
     fetchData();
   }, [personId, dispatch]);
 
-  if (status === "loading" || !details || !cast || !crew) {
+  if (status === "loading") {
     return <Loading />;
   }
 
@@ -68,8 +57,43 @@ export const PersonPage = () => {
         birthplace={details.place_of_birth}
         biography={details.biography}
       />
-      <MainHeader title="Movies - cast (4)" />
-      <MainHeader title="Movies - crew (4)" />
+      {credits.cast.length > 0 && (
+       <>
+        <MainHeader title={`Movies - cast (${credits.cast.length})`} />
+        <List>
+        {credits.cast.map((movie) => (
+            <div key={movie.id}>
+              <StyledLink to={toMovie({ movieId: movie.id })}>
+                <MovieTile
+                  movie={movie}
+                  id={movie.id}
+                  genres={movie.genre_ids}
+                />
+              </StyledLink>
+            </div>
+          ))}
+        </List>
+        </>
+      )}
+      {credits.crew.length > 0 && (
+        <>
+        <MainHeader title={`Movies - crew (${credits.crew.length})`} />
+        <List>
+        {credits.crew.map((movie) => (
+            <div key={movie.id}>
+              <StyledLink to={toMovie({ movieId: movie.id })}>
+                <MovieTile
+                  movie={movie}
+                  id={movie.id}
+                  genres={movie.genre_ids}
+                />
+              </StyledLink>
+            </div>
+          ))}
+        </List>
+        </>
+      )}
+      <Bottom />
     </Container>
   );
 };
