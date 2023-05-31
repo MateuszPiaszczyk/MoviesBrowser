@@ -18,6 +18,8 @@ const personDetailsSlice = createSlice({
       state.status = "success";
       state.details = action.payload.details;
       state.credits = action.payload.credits;
+      state.cast = action.payload.cast;
+      state.crew = action.payload.crew;
     },
     fetchPersonDetailsError: (state) => {
       state.status = "error";

@@ -1,4 +1,4 @@
-import { call, delay, put, takeLatest } from "redux-saga/effects";
+import { call, delay, put, takeLatest, select } from "redux-saga/effects";
 import { getPerson, getPersonCredits } from "./getPersonApi";
 import {
   selectPersonId, 
