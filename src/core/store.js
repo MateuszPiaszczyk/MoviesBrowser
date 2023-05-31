@@ -5,6 +5,7 @@ import popularMoviesReducer from "../features/movies/MoviesList/popularMoviesSli
 import popularPeopleReducer from "../features/people/PeopleList/popularPeopleSlice";
 import genresReducer from "../features/movies/Genres/genresSlice";
 import movieDetailsReducer from "../features/movies/MovieDetails/movieDetailsSlice";
+import personDetailsReducer from "../features/people/PersonPage/personSlice";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -14,6 +15,7 @@ const store = configureStore({
     genres: genresReducer,
     popularPeople: popularPeopleReducer,
     movieDetails: movieDetailsReducer,
+    personDetails: personDetailsReducer,
   },
   middleware: [sagaMiddleware],
 });
