@@ -12,6 +12,7 @@ export const theme = {
         stormGrey: "#74788B",
         mine: "#333333",
         shadow: "0px 4px 12px rgba(186, 199, 213, 0.5)",
+        darkerGrey: "#7E839A",
     },
 
     breakpoint: {
