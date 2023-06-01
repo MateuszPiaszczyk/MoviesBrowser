@@ -1,8 +1,9 @@
-import { Name, Photo, PhotoWrapper, Tile } from "./styled";
+import { Name, Photo, PhotoWrapper, Tile, StyledLink, Person, Role } from "./styled";
 import { IMG_URL } from "../../core/apiCodes";
 import noPhoto from "../img/no-photo.svg";
 import {toPerson} from "../../core/App/routes";
 import { PersonImage } from "../Images";
+
 
 export const PersonTile = ({ person }) => {
     return (
