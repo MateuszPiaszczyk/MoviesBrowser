@@ -9,17 +9,21 @@ export const useQueryParameter = (key) => {
 export const useReplaceQueryParameter = () => {
   const location = useLocation();
   const history = useHistory();
-  const searchParams = new URLSearchParams(location.search);
- 
-  return ({ basicURL, key, value }) => {
 
-    if (value === undefined) {
-      searchParams.delete(key);
-    } else {
-      searchParams.set(key, value);
+  const replaceQueryParameter = (keyValue) => {
+    const searchParams = new URLSearchParams(location.search);
+
+    for (const { key, value } of keyValue) {
+      if (value === undefined) {
+        searchParams.delete(key);
+      } else {
+        searchParams.set(key, value);
+      }
     }
-    
-    const newSearch = searchParams.toString();
-    history.push(`${basicURL}?${newSearch}`);
+    history.push(
+      `/${location.pathname.split("/")[1]}?${searchParams.toString()}`
+    );
   };
+
+  return replaceQueryParameter;
 };
