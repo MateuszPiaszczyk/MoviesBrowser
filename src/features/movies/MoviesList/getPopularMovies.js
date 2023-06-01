@@ -1,9 +1,9 @@
 import { API_KEY, ApiPopularMovies } from "../../../core/apiCodes";
 
-export const popularMovies = async () => {
+export const popularMovies = async ({ page }) => {
   try {
     const response = await fetch(
-      `${ApiPopularMovies}?api_key=${API_KEY}&language=en-US&page=1`
+      `${ApiPopularMovies}?api_key=${API_KEY}&language=en-US&page=${page}`
     );
     if (!response.ok) {
       throw new Error("Not found movies.");
