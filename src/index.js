@@ -6,7 +6,6 @@ import { theme } from "./core/App/theme";
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
 import store from "./core/store";
-import { HashRouter } from "react-router-dom";
 import { GlobalStyle } from "./core/App/GlobalStyle";
 import { Normalize } from "styled-normalize";
 
@@ -15,11 +14,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <HashRouter>
           <GlobalStyle />
           <Normalize />
           <App />
-        </HashRouter>
       </ThemeProvider>
     </Provider>
   </React.StrictMode>
