@@ -1,6 +1,7 @@
 import { Wrapper, Button, ButtonText, Text, PageText } from "./styled";
-import { useReplaceQueryParameter } from "../../queryParameters";
-import { pageQueryParamName } from "../../searchQueryParamName";
+
+import { pageQueryParamName } from "../../features/queryParamName";
+import { useReplaceQueryParameter } from "../../features/queryParameters";
 
 export const Pagination = ({ pageNumber, totalPages }) => {
   const replaceQueryParameter = useReplaceQueryParameter();

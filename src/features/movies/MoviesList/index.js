@@ -10,8 +10,9 @@ import { toMovie } from "../../../core/App/routes";
 import { Pagination } from "../../../common/Pagination";
 import { Loading} from "../../../common/Loading";
 import { NoResult} from "../../../common/NoResult";
-import { useQueryParameter } from "../../../queryParameters";
-import { pageQueryParamName, searchQueryParamName } from "../../../searchQueryParamName";
+import { useQueryParameter } from "../../queryParameters";
+import { pageQueryParamName, searchQueryParamName } from "../../queryParamName";
+
 
 export const MoviesList = () => {
   const dispatch = useDispatch();
