@@ -7,6 +7,8 @@ const personDetailsSlice = createSlice({
     personId: 0,
     credits: [],
     details: {},
+    cast: [],
+    crew: [],
   },
   reducers: {
     fetchPersonDetails: (state) => {
@@ -16,6 +18,8 @@ const personDetailsSlice = createSlice({
       state.status = "success";
       state.details = action.payload.details;
       state.credits = action.payload.credits;
+      state.crew = action.payload.crew;
+      state.cast = action.payload.cast;
     },
     fetchPersonDetailsError: (state) => {
       state.status = "error";

@@ -111,7 +111,7 @@ export const Role = styled.span`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  color: ${({ theme }) => theme.color.woodsmoke};
+  color: ${({ theme }) => theme.colors.woodsmoke};
   display: block;
   height: 100%;
 

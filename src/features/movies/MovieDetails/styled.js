@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const List = styled.ul`
   display: grid;
@@ -23,7 +24,20 @@ transition: transform 0.15s ease-out;
 &:hover {
     transform: translateY(-6px);
   }
+  @media (max-width: ${({ theme }) => theme.breakpoint.fullPage}px) {
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    &:hover {
+      transform: translateY(0);
+    }
+  }
 `;
 
-export const SingleMovieContainer = styled.main`
-`
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.white};
+`;
