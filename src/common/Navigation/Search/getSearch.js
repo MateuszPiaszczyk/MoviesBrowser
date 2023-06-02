@@ -13,3 +13,14 @@ export const searchMovie = async ({ query, page }) => {
   
     return await response.data;
   };
+
+  export const searchPeople = async ({ page, query }) => {
+    const response = await axios.get(
+      `${API_URL}/search/person?api_key=${API_KEY}&language=en-US&query=${query}&page=${page}&include_adult=false`
+    );
+    if (!response.ok) {
+      new Error(response.statusText);
+    }
+  
+    return await response.data;
+  };
