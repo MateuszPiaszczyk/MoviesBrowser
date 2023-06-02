@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 `;
 
 export const NoResultIcon = styled(NoResult)`
-  @media (max-width: 767px) {
-    height: 200px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    height: 300px;
   }
 `;

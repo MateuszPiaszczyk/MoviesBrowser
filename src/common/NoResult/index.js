@@ -4,7 +4,7 @@ import { MainHeader } from "../MainHeader";
 
 export const NoResult = ({query}) => (
   <Container>
-    <MainHeader title={`Sorry,there are no results for "${query}"`} />
+    <MainHeader title={`Sorry, there are no results for "${query}"`} />
     <Wrapper>
       <NoResultIcon />
     </Wrapper>
