@@ -43,7 +43,7 @@ export const MoviesList = () => {
     <>
     {pageNumber > totalPages ?
       <ErrorPage /> : totalResults === 0 ?
-      <NoResult /> :
+      <NoResult query={query} /> :
       
       <Container>
         <MainHeader title={
