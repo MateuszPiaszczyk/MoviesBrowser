@@ -10,6 +10,7 @@ export const Details = styled.article`
   grid-template-columns: minmax(auto, 312px) 1fr;
   grid-template-rows: auto 1fr;
   border-radius: 5px;
+  margin-top: 64px;
   @media (max-width: ${({ theme }) => theme.breakpoint.fullPage}px) {
    padding: 28px;
    gap: 0 28px;
