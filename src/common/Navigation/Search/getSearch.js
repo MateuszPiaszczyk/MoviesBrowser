@@ -1,6 +1,10 @@
-import { API_KEY, API_URL } from "../../../core/apiCodes";
+import axios from "axios";
+
+const API_KEY = "ae7d4af255a05506e1ed3b49e48b0d5c";
+const API_URL = "https://api.themoviedb.org/3";
+
 export const searchMovie = async ({ query, page }) => {
-    const response = await fetch(
+    const response = await axios.get(
       `${API_URL}/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=${page}&include_adult=false`
     );
     if (!response.ok) {
