@@ -1,21 +1,30 @@
-import { call, put, takeLatest } from "redux-saga/effects";
+import { call, put, takeLatest, select } from "redux-saga/effects";
 import { getPopularPeople } from "./getPopularPeople";
 import {
   fetchPopularPeople,
+  goToPage,
   fetchPopularPeopleError,
   fetchPopularPeopleSuccess,
+  selectPeoplePage,
+  selectQuery,
 } from "./popularPeopleSlice";
-
+import { searchPeople } from "../../../common/Navigation/Search/getSearch";
 function* fetchPopularPeopleHandler() {
   try {
-    const popularPeopleList = yield call(getPopularPeople);
-    yield put(fetchPopularPeopleSuccess(popularPeopleList));
+    const page = yield select(selectPeoplePage);
+    const query = yield select(selectQuery);
+    let data;
+    if (query !== "") {
+      data = yield call(searchPeople, { page: page, query: query });
+    } else {
+      data = yield call(getPopularPeople, { page: page });
+    }
+    yield put(fetchPopularPeopleSuccess({ data }));
   } catch (error) {
     yield put(fetchPopularPeopleError());
-    yield call(alert, "Download failed.");
   }
 }
 
 export function* popularPeopleSaga() {
-  yield takeLatest(fetchPopularPeople.type, fetchPopularPeopleHandler);
+  yield takeLatest(goToPage.type, fetchPopularPeopleHandler);
 }
