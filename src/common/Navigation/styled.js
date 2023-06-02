@@ -19,7 +19,7 @@ export const StyledNavigationLink = styled(NavLink).attrs(() => ({
 `;
 
 export const StyledNavigation = styled.nav`
-  background: ${({ theme }) => theme.colors.woodsmoke};
+  background: ${({ theme }) => theme.colors.black};
   margin: 0;
   width: 100%;
   padding: 22px 16px;
