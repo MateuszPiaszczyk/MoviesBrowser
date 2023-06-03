@@ -21,6 +21,7 @@ import { toPerson } from "../../../core/App/routes";
 import { useQueryParameter } from "../../queryParameters";
 import { pageQueryParamName, searchQueryParamName } from "../../queryParamName";
 
+
 export const PeopleList = () => {
   const dispatch = useDispatch();
   const pageNumber = useSelector(selectPeoplePage);
@@ -60,7 +61,12 @@ export const PeopleList = () => {
           {popularPeople.map((person) => (
             <ListItem key={person.id}>
               <StyledLink to={toPerson({ personId: person.id })}>
-                <PersonTile person={person} />
+              <PersonTile
+                        id={person.id}
+                        name={person.name}
+                        role={person.character}
+                        poster={person.profile_path}
+                      />
               </StyledLink>
             </ListItem>
           ))}

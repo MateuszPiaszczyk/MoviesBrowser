@@ -10,7 +10,6 @@ import { Backdrop } from "./Backdrop";
 import { Subtitle } from "../../../common/Title";
 import { PersonTile } from "../../../common/PersonTile";
 import { List, Item, StyledLink } from "./styled";
-import { PersonCastTile } from "../../../common/PersonTile";
 import { toPerson } from "../../../core/App/routes";
 
 
@@ -63,9 +62,9 @@ export const MovieDetails = () => {
                 <Subtitle subtitle="Cast" />
                 <List>
                   {credits.cast.map((person) => (
-                    <Item key={person.id}>
+                    <Item key={person.credit_id}>
                       <StyledLink to={toPerson({ personId: person.id })}>
-                      <PersonCastTile
+                      <PersonTile
                         id={person.id}
                         name={person.name}
                         role={person.character}
@@ -83,9 +82,9 @@ export const MovieDetails = () => {
                 <Subtitle subtitle="Crew" />
                 <List>
                   {credits.crew.map((person) => (
-                    <Item key={person.id}>
+                    <Item key={person.credit_id}>
                       <StyledLink to={toPerson({ personId: person.id})}>
-                      <PersonCastTile
+                      <PersonTile
                         id={person.id}
                         name={person.name}
                         role={person.job}
