@@ -6,8 +6,13 @@
 ## Description  
 This is a group project co-created with [Mateusz Piaszczyk](https://github.com/MateuszPiaszczyk) [Dawid Zięba](https://github.com/Dawid-Zieba) and [Aneta Borowski](https://github.com/BoAneta).
 
+## About an app
+This is a web application where you can browse movies and individuals based on their popularity. You can search for a specific movie or person, check the movie's description, the cast involved, and its ratings. You can also explore the movies in which a chosen actor has appeared.
+
 ## Demo Link
 [Demo Movie Browser](https://mateuszpiaszczyk.github.io/MoviesBrowser/)
+
+![Movies Browser Gif](/movie-browser-screen.gif)
 
 ## Used technologies, languages
 
