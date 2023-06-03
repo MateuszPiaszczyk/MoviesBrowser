@@ -55,6 +55,7 @@ export const MovieDetails = () => {
               votes={details.vote_count}
               overview={details.overview}
               production={details.production_countries}
+              release={details.release_date}
 
             />
             {credits.cast.length > 0 && (
