@@ -10,7 +10,7 @@ export const PersonTileWrapper = styled.div`
     box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.lightHeather};
     grid-template-rows: auto 1fr;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.laptop}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     gap: 0 28px;
     grid-template-columns: minmax(auto, 215px) 1fr;
     padding: 28px;
@@ -27,7 +27,7 @@ export const PersonPhoto = styled.img`
     border-radius: 5px;
     grid-row: span 2 / auto;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.laptop}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     width: 215px;
     height: 319px;
   }
@@ -37,7 +37,7 @@ export const PersonPhoto = styled.img`
   }
 `;
 export const PersonData = styled.div`
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     grid-row: span 2;
   }
 `;
@@ -72,7 +72,7 @@ export const Birth = styled.span`
   margin: 0px 10px 0px 0px;
   line-height: 1.2;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.laptop}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     font-size: 15px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
@@ -88,7 +88,7 @@ export const BirthDetails = styled.span`
   margin: 0;
   line-height: 1.2;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.laptop}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     font-size: 15px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
@@ -103,8 +103,9 @@ export const Biography = styled.article`
   color: ${({ theme }) => theme.colors.woodsmoke};
   margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.laptop}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     font-size: 17px;
+    padding-top: 10px;
     grid-row: 3;
     grid-column: span 2;
     margin-top: 24px;
