@@ -9,7 +9,7 @@ import {
   TitleLink,
   Wrapper,
 } from "./styled";
-import camera from "../../assets/camera.svg";
+import camera from "../img/camera.svg";
 import { toMovies, toPeople } from "../../core/App/routes";
 import { Search } from "./Search";
 import { Container } from "../Container/styled";
