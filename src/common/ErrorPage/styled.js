@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { ReactComponent as Error } from "../img/error.svg";
 
 export const ErrorWrapper = styled.section`
   text-align: center;
+
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     margin-top: 140px;
   }
@@ -29,5 +31,6 @@ export const ErrorInfo = styled.h2`
 `;
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.color.scienceBlue};
+  background-color: ${({ theme }) => theme.colors.scienceBlue};
+  padding: 16px, 24px, 16px, 24px;
 `;
