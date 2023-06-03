@@ -66,6 +66,9 @@ export const Name = styled.div`
     font-size: 22px;
     text-align: center;
     margin-top: 14px;
+    color: ${({ theme }) => theme.colors.woodsmoke};
+    margin: 12px 0 8px;
+    
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     font-size: 14px;
