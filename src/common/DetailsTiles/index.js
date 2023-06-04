@@ -1,7 +1,7 @@
 import { DetailsRating } from "../Rating";
 import { GenresDetails } from "../../features/movies/Genres";
 import { DetailsImage } from "../Images";
-import { AdditionalInfo, MainInfoDetails, PersonInfo} from "../Informations";
+import { AdditionalInfo, MainInfoDetails} from "../Informations";
 import { Overview, DetailsDescription, Details } from "./styled";
 
 export const MovieDetailsTile = ({poster,title,year,genres,vote,votes,overview,production,release,}) => (
@@ -17,19 +17,3 @@ export const MovieDetailsTile = ({poster,title,year,genres,vote,votes,overview,p
     </Details>
   );
   
-  export const PersonDetailsTile = ({
-    poster,
-    title,
-    overview,
-    dateOfBirth,
-    placeOfBirth,
-  }) => (
-    <Details>
-      <DetailsImage poster={poster} />
-      <DetailsDescription>
-        <MainInfoDetails title={title} />
-        <PersonInfo dateOfBirth={dateOfBirth} placeOfBirth={placeOfBirth} />
-      </DetailsDescription>
-      <Overview>{overview}</Overview>
-    </Details>
-  );
