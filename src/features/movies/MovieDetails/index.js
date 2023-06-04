@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {getMovieId, selectCast, selectCredits, selectCrew, selectDetails, selectStatus } from "./movieDetailsSlice";
+import {getMovieId, selectCredits, selectDetails, selectStatus } from "./movieDetailsSlice";
 import { MainContainer } from "../../../common/Container";
 import { ErrorPage } from "../../../common/ErrorPage";
 import { MovieDetailsTile } from "../../../common/DetailsTiles";
@@ -12,13 +12,10 @@ import { PersonTile } from "../../../common/PersonTile";
 import { List, Item, StyledLink } from "./styled";
 import { toPerson } from "../../../core/App/routes";
 
-
 export const MovieDetails = () => {
   const dispatch = useDispatch();
   const {movieId} = useParams();
   const details = useSelector(selectDetails);
-  const cast = useSelector(selectCast);
-  const crew = useSelector(selectCrew);
   const status = useSelector(selectStatus);
   const credits = useSelector(selectCredits)
 

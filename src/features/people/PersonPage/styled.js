@@ -37,5 +37,5 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Bottom = styled.div`
-    margin-top: 70px;
+    margin-top: 55px;
 `;

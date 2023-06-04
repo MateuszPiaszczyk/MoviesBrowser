@@ -9,9 +9,16 @@ import {
     BirthDetails,
     Biography
 } from "./styled";
-import personPhoto from "../../../../common/img/person.png";
 
 export const MainPersonTile = ({ poster, name, birthday, birthplace, biography }) => {
+    const formatDate = (dateString) => {
+        const dateParts = dateString.split("-");
+        const year = dateParts[0];
+        const month = dateParts[1];
+        const day = dateParts[2];
+        return `${day}.${month}.${year}`;
+      };
+
     return (
         <PersonTileWrapper>
             {poster && <PersonPhoto src={`${IMG_URL}${poster}`} />}
@@ -20,7 +27,7 @@ export const MainPersonTile = ({ poster, name, birthday, birthplace, biography }
                 {birthday && (
                 <BasicInfo>
                     <Birth>Date of birth: </Birth>
-                    <BirthDetails>{birthday}</BirthDetails>
+                    <BirthDetails>{formatDate(birthday)}</BirthDetails>
                 </BasicInfo>
                 )}
                 {birthplace && (

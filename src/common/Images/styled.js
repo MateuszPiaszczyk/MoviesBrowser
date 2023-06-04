@@ -1,5 +1,5 @@
 import styled,{ css } from "styled-components";
-import camera from "../../assets/camera.svg";
+import camera from "../img/camera.svg";
 import person from "../img/person.svg";
 
 export const Wrapper = styled.div`
