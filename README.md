@@ -18,7 +18,6 @@ This is a web application where you can browse movies and individuals based on t
 
 <p align="center"><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"><img src="https://skillicons.dev/icons?i=html" alt="html5"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript"/></a>  <a href="https://styled-components.com" target="_blank" rel="noreferrer"><img src="https://skillicons.dev/icons?i=styledcomponents" alt="styledcomponents"/></a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=react" alt="react"/>  </a> <a href="https://redux.js.org" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=redux" alt="redux"/> </a> <a href="https://webpack.js.org" target="_blank" rel="noreferrer"><img src="https://skillicons.dev/icons?i=webpack" alt="webpack"/> </a> <a href="https://www.figma.com" target="_blank" rel="noreferrer"><img src="https://skillicons.dev/icons?i=figma" alt="figma"/> </a> </p>
 
-## This readme wil be updating along with our aplication.
 
 # Getting Started with Create React App
 
