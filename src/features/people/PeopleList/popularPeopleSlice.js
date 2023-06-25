@@ -15,15 +15,15 @@ const popularPeopleSlice = createSlice({
     fetchPopularPeople: (state) => {
       state.status = "loading";
     },
-    fetchPopularPeopleSuccess: (state, {payload}) => {
-      state.status="loading";
+    fetchPopularPeopleSuccess: (state, { payload }) => {
+      state.status = "loading";
       state.status = "success";
-      state.totalPages = payload.data.total_pages > 500 ? 500 : payload.data.total_pages;
+      state.totalPages =
+        payload.data.total_pages > 500 ? 500 : payload.data.total_pages;
       state.totalResults = payload.data.total_results;
       state.people = payload.data.results;
-
-  },
-    fetchPopularPeopleError:(state) => {
+    },
+    fetchPopularPeopleError: (state) => {
       state.status = "error";
     },
     goToPage: (state, { payload }) => {
@@ -33,7 +33,6 @@ const popularPeopleSlice = createSlice({
     setQuery: (state, { payload }) => {
       state.status = "loading";
       state.query = payload.query;
-
     },
   },
 });
@@ -52,8 +51,10 @@ export const selectPopularPeopleStatus = (state) =>
 export const selectPopularPeople = (state) =>
   selectStatePopularPeople(state).people;
 export const selectPeoplePage = (state) => selectStatePopularPeople(state).page;
-export const selectTotalPages = (state) => selectStatePopularPeople(state).totalPages;
-export const selectTotalResults = (state) => selectStatePopularPeople(state).totalResults;
+export const selectTotalPages = (state) =>
+  selectStatePopularPeople(state).totalPages;
+export const selectTotalResults = (state) =>
+  selectStatePopularPeople(state).totalResults;
 export const selectQuery = (state) => selectStatePopularPeople(state).query;
 
 export default popularPeopleSlice.reducer;

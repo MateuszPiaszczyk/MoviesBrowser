@@ -1,7 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {getMovieId, selectCredits, selectDetails, selectStatus } from "./movieDetailsSlice";
+import {
+  getMovieId,
+  selectCredits,
+  selectDetails,
+  selectStatus,
+} from "./movieDetailsSlice";
 import { MainContainer } from "../../../common/Container";
 import { ErrorPage } from "../../../common/ErrorPage";
 import { MovieDetailsTile } from "../../../common/DetailsTiles";
@@ -14,22 +19,20 @@ import { toPerson } from "../../../core/App/routes";
 
 export const MovieDetails = () => {
   const dispatch = useDispatch();
-  const {movieId} = useParams();
+  const { movieId } = useParams();
   const details = useSelector(selectDetails);
   const status = useSelector(selectStatus);
-  const credits = useSelector(selectCredits)
+  const credits = useSelector(selectCredits);
 
   useEffect(() => {
-        dispatch(getMovieId({movieId: movieId}));
+    dispatch(getMovieId({ movieId: movieId }));
   }, [movieId, dispatch]);
 
-  
-
-  return (
-    status === "loading" ?
-    <Loading /> :
-    status === "error" ?
-    <ErrorPage /> :
+  return status === "loading" ? (
+    <Loading />
+  ) : status === "error" ? (
+    <ErrorPage />
+  ) : (
     <>
       {details.backdrop_path && (
         <Backdrop
@@ -53,7 +56,6 @@ export const MovieDetails = () => {
               overview={details.overview}
               production={details.production_countries}
               release={details.release_date}
-
             />
             {credits.cast.length > 0 && (
               <>
@@ -62,14 +64,13 @@ export const MovieDetails = () => {
                   {credits.cast.map((person) => (
                     <Item key={person.credit_id}>
                       <StyledLink to={toPerson({ personId: person.id })}>
-                      <PersonTile
-                        id={person.id}
-                        name={person.name}
-                        role={person.character}
-                        poster={person.profile_path}
-                      />
+                        <PersonTile
+                          id={person.id}
+                          name={person.name}
+                          role={person.character}
+                          poster={person.profile_path}
+                        />
                       </StyledLink>
-
                     </Item>
                   ))}
                 </List>
@@ -81,13 +82,13 @@ export const MovieDetails = () => {
                 <List>
                   {credits.crew.map((person) => (
                     <Item key={person.credit_id}>
-                      <StyledLink to={toPerson({ personId: person.id})}>
-                      <PersonTile
-                        id={person.id}
-                        name={person.name}
-                        role={person.job}
-                        poster={person.profile_path}
-                      />
+                      <StyledLink to={toPerson({ personId: person.id })}>
+                        <PersonTile
+                          id={person.id}
+                          name={person.name}
+                          role={person.job}
+                          poster={person.profile_path}
+                        />
                       </StyledLink>
                     </Item>
                   ))}

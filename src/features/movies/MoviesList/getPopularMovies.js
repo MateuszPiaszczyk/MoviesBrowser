@@ -1,6 +1,6 @@
 import { API_KEY, ApiPopularMovies } from "../../../core/apiCodes";
 
-export const popularMovies = async ({page}) => {
+export const popularMovies = async ({ page }) => {
   try {
     const response = await fetch(
       `${ApiPopularMovies}?api_key=${API_KEY}&language=en-US&page=${page}`

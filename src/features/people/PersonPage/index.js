@@ -8,7 +8,7 @@ import {
   selectCast,
   selectCredits,
   selectDetails,
-  selectStatus
+  selectStatus,
 } from "./personSlice";
 import { MainPersonTile } from "./MainPersonTile";
 import { MainHeader } from "../../../common/MainHeader";
@@ -58,39 +58,39 @@ export const PersonPage = () => {
         biography={details.biography}
       />
       {credits.cast.length > 0 && (
-       <>
-        <MainHeader title={`Movies - cast (${credits.cast.length})`} />
-        <List>
-        {credits.cast.map((movie) => (
-            <div key={movie.id}>
-              <StyledLink to={toMovie({ movieId: movie.id })}>
-                <MovieTile
-                  movie={movie}
-                  id={movie.id}
-                  genres={movie.genre_ids}
-                />
-              </StyledLink>
-            </div>
-          ))}
-        </List>
+        <>
+          <MainHeader title={`Movies - cast (${credits.cast.length})`} />
+          <List>
+            {credits.cast.map((movie) => (
+              <div key={movie.id}>
+                <StyledLink to={toMovie({ movieId: movie.id })}>
+                  <MovieTile
+                    movie={movie}
+                    id={movie.id}
+                    genres={movie.genre_ids}
+                  />
+                </StyledLink>
+              </div>
+            ))}
+          </List>
         </>
       )}
       {credits.crew.length > 0 && (
         <>
-        <MainHeader title={`Movies - crew (${credits.crew.length})`} />
-        <List>
-        {credits.crew.map((movie) => (
-            <div key={movie.id}>
-              <StyledLink to={toMovie({ movieId: movie.id })}>
-                <MovieTile
-                  movie={movie}
-                  id={movie.id}
-                  genres={movie.genre_ids}
-                />
-              </StyledLink>
-            </div>
-          ))}
-        </List>
+          <MainHeader title={`Movies - crew (${credits.crew.length})`} />
+          <List>
+            {credits.crew.map((movie) => (
+              <div key={movie.id}>
+                <StyledLink to={toMovie({ movieId: movie.id })}>
+                  <MovieTile
+                    movie={movie}
+                    id={movie.id}
+                    genres={movie.genre_ids}
+                  />
+                </StyledLink>
+              </div>
+            ))}
+          </List>
         </>
       )}
       <Bottom />
