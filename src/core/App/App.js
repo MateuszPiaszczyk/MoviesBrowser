@@ -8,26 +8,25 @@ import { PersonPage } from "../../features/people/PersonPage";
 
 export const App = () => (
   <>
-  <HashRouter>
-    <Navigation />
-    <Switch>
-    <Route path={toMovie()}>
-        <MovieDetails />
-      </Route>
-      <Route path={toMovies()}>
-        <MoviesList />
-      </Route>
-      <Route path={toPerson()}>
-        <PersonPage />
-      </Route>
-      <Route path={toPeople()}>
-        <PeopleList />
-      </Route>
-      <Route path="/">
-        <Redirect to={toMovies()} />
-      </Route>
-    </Switch>
+    <HashRouter>
+      <Navigation />
+      <Switch>
+        <Route path={toMovie()}>
+          <MovieDetails />
+        </Route>
+        <Route path={toMovies()}>
+          <MoviesList />
+        </Route>
+        <Route path={toPerson()}>
+          <PersonPage />
+        </Route>
+        <Route path={toPeople()}>
+          <PeopleList />
+        </Route>
+        <Route path="/">
+          <Redirect to={toMovies()} />
+        </Route>
+      </Switch>
     </HashRouter>
   </>
-  
 );

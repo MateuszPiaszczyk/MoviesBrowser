@@ -18,11 +18,11 @@ export const List = styled.ul`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  `;
+`;
 
 export const Item = styled.li`
-transition: transform 0.15s ease-out;
-&:hover {
+  transition: transform 0.15s ease-out;
+  &:hover {
     transform: translateY(-6px);
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.fullPage}px) {

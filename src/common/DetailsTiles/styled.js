@@ -12,17 +12,16 @@ export const Details = styled.article`
   border-radius: 5px;
   margin-top: 64px;
   @media (max-width: ${({ theme }) => theme.breakpoint.fullPage}px) {
-   padding: 28px;
-   gap: 0 28px;
-   grid-template-columns: minmax(auto, 215px) 1fr;
+    padding: 28px;
+    gap: 0 28px;
+    grid-template-columns: minmax(auto, 215px) 1fr;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-   padding: 16px;
-   gap:0 16px;
-   grid-template-columns: minmax(auto, 114px) 1fr;
+    padding: 16px;
+    gap: 0 16px;
+    grid-template-columns: minmax(auto, 114px) 1fr;
   }
-
-  `;
+`;
 
 export const DetailsDescription = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.fullPage}px) {
@@ -33,7 +32,7 @@ export const DetailsDescription = styled.div`
 export const Overview = styled.p`
   font-weight: 400;
   font-size: 20px;
-  color: ${({ theme}) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.black};
   margin: 0;
   line-height: 160%;
   display: flex;
@@ -48,5 +47,4 @@ export const Overview = styled.p`
     font-size: 14px;
     margin-top: 4px;
   }
-  `;
-  
+`;

@@ -25,7 +25,7 @@ const personDetailsSlice = createSlice({
       state.status = "error";
     },
     getPersonId: (state, action) => {
-      console.log("personId payload:", action.payload)
+      console.log("personId payload:", action.payload);
       state.personId = action.payload;
     },
   },

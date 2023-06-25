@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { toMovies } from "../../core/App/routes";
-import { ErrorWrapper, ErrorMessage, ErrorInfo, Button, ErrorIcon,} from "./styled";
+import {
+  ErrorWrapper,
+  ErrorMessage,
+  ErrorInfo,
+  Button,
+  ErrorIcon,
+} from "./styled";
 
 export const ErrorPage = () => {
   return (

@@ -22,7 +22,7 @@ const movieDetailsSlice = createSlice({
       state.status = "error";
     },
     getMovieId: (state, action) => {
-      console.log("movieId payload:", action.payload)
+      console.log("movieId payload:", action.payload);
       state.movieId = action.payload;
     },
   },

@@ -14,13 +14,12 @@ import { List, ListItem, StyledLink } from "./styled";
 import { Container } from "../../../common/Container/styled";
 import { PersonTile } from "../../../common/PersonTile";
 import { ErrorPage } from "../../../common/ErrorPage";
-import { Loading} from "../../../common/Loading";
-import { NoResult} from "../../../common/NoResult";
+import { Loading } from "../../../common/Loading";
+import { NoResult } from "../../../common/NoResult";
 import { Pagination } from "../../../common/Pagination";
 import { toPerson } from "../../../core/App/routes";
 import { useQueryParameter } from "../../queryParameters";
 import { pageQueryParamName, searchQueryParamName } from "../../queryParamName";
-
 
 export const PeopleList = () => {
   const dispatch = useDispatch();
@@ -34,46 +33,47 @@ export const PeopleList = () => {
   const query = useQueryParameter(searchQueryParamName);
 
   useEffect(() => {
-    dispatch(setQuery(query
-      ? { query: query }
-      : { query: "" }));
-    dispatch(goToPage(page
-      ? { page: page }
-      : { page: 1 }));
+    dispatch(setQuery(query ? { query: query } : { query: "" }));
+    dispatch(goToPage(page ? { page: page } : { page: 1 }));
   }, [query, page, dispatch]);
 
-    return (
-      status === "loading" ?
-    <Loading /> :
-    status === "error" ?
-    <ErrorPage /> :
+  return status === "loading" ? (
+    <Loading />
+  ) : status === "error" ? (
+    <ErrorPage />
+  ) : (
     <>
-      {pageNumber > totalPages ?
-      <ErrorPage /> : totalResults === 0 ?
-      <NoResult /> :
-      <Container>
-        <MainHeader title={
-                query
-                  ? `Search results for “${query}” (${totalResults})`
-                  : `Popular People`
-              }/>
-        <List>
-          {popularPeople.map((person) => (
-            <ListItem key={person.id}>
-              <StyledLink to={toPerson({ personId: person.id })}>
-              <PersonTile
-                        id={person.id}
-                        name={person.name}
-                        role={person.character}
-                        poster={person.profile_path}
-                      />
-              </StyledLink>
-            </ListItem>
-          ))}
-        </List>
-        <Pagination pageNumber={pageNumber} totalPages={totalPages}/>
-      </Container>
-};
-</>
-    );
+      {pageNumber > totalPages ? (
+        <ErrorPage />
+      ) : totalResults === 0 ? (
+        <NoResult />
+      ) : (
+        <Container>
+          <MainHeader
+            title={
+              query
+                ? `Search results for “${query}” (${totalResults})`
+                : `Popular People`
+            }
+          />
+          <List>
+            {popularPeople.map((person) => (
+              <ListItem key={person.id}>
+                <StyledLink to={toPerson({ personId: person.id })}>
+                  <PersonTile
+                    id={person.id}
+                    name={person.name}
+                    role={person.character}
+                    poster={person.profile_path}
+                  />
+                </StyledLink>
+              </ListItem>
+            ))}
+          </List>
+          <Pagination pageNumber={pageNumber} totalPages={totalPages} />
+        </Container>
+      )}
+      ;
+    </>
+  );
 };

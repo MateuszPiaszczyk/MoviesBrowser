@@ -2,7 +2,7 @@ import axios from "axios";
 const API_KEY = "ae7d4af255a05506e1ed3b49e48b0d5c";
 const API_URL = "https://api.themoviedb.org/3";
 
-export const getMovieDetails = async ({movieId}) => {
+export const getMovieDetails = async ({ movieId }) => {
   console.log("getMovieDetails movieId:", movieId);
   try {
     const response = await axios.get(
@@ -18,7 +18,7 @@ export const getMovieDetails = async ({movieId}) => {
   }
 };
 
-export const getMovieCredits = async ({movieId}) => {
+export const getMovieCredits = async ({ movieId }) => {
   console.log("getMovieCredits movieId:", movieId);
   try {
     const response = await axios.get(

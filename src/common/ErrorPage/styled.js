@@ -33,7 +33,6 @@ export const ErrorIcon = styled(Error)`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     width: 80px;
   }
-
 `;
 
 export const ErrorInfo = styled.h2`
@@ -60,9 +59,9 @@ export const Button = styled.button`
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  font-family:"Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
   transition: opacity 0.3s ease-in-out;
-  &:hover{
-        opacity: 0.7;
-    };
+  &:hover {
+    opacity: 0.7;
+  }
 `;

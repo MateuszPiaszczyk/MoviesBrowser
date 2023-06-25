@@ -43,12 +43,15 @@ export const {
 } = popularMoviesSlice.actions;
 
 export const selectStatePopularMovies = (state) => state.popularMovies;
-export const selectPopularMovies = (state) => selectStatePopularMovies(state).movies;
+export const selectPopularMovies = (state) =>
+  selectStatePopularMovies(state).movies;
 export const selectGenres = (state) => selectStatePopularMovies(state).genres;
 export const selectStatus = (state) => selectStatePopularMovies(state).status;
 export const selectPage = (state) => selectStatePopularMovies(state).page;
-export const selectTotalPages = (state) => selectStatePopularMovies(state).totalPages;
+export const selectTotalPages = (state) =>
+  selectStatePopularMovies(state).totalPages;
 export const selectQuery = (state) => selectStatePopularMovies(state).query;
-export const selectTotalResults = (state) => selectStatePopularMovies(state).totalResults;
+export const selectTotalResults = (state) =>
+  selectStatePopularMovies(state).totalResults;
 
 export default popularMoviesSlice.reducer;

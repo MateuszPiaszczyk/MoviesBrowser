@@ -37,14 +37,12 @@ export const NavigationGrid = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     width: 100%;
     grid-template-columns: 1fr;
-    
   }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  
 `;
 
 export const TitleLink = styled(Link)`

@@ -14,9 +14,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <Normalize />
-          <App />
+        <GlobalStyle />
+        <Normalize />
+        <App />
       </ThemeProvider>
     </Provider>
   </React.StrictMode>

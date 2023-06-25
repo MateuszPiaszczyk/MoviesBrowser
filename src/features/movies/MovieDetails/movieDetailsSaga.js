@@ -1,5 +1,10 @@
 import { takeLatest, select, call, put } from "redux-saga/effects";
-import {selectMovieId, getMovieId, fetchMovieDetailsError, fetchMovieDetailsSuccess} from "./movieDetailsSlice";
+import {
+  selectMovieId,
+  getMovieId,
+  fetchMovieDetailsError,
+  fetchMovieDetailsSuccess,
+} from "./movieDetailsSlice";
 import { getMovieDetails, getMovieCredits } from "./getMovieDetails";
 
 function* fetchMovieDetailsHandler() {

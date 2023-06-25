@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const PersonTileWrapper = styled.div`
-    background-color: ${({ theme }) => theme.colors.white};
-    margin: 56px 0px;
-    padding: 40px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0px 40px;
-    box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.lightHeather};
-    grid-template-rows: auto 1fr;
+  background-color: ${({ theme }) => theme.colors.white};
+  margin: 56px 0px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0px 40px;
+  box-shadow: 0px 4px 12px ${({ theme }) => theme.colors.lightHeather};
+  grid-template-rows: auto 1fr;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     gap: 0 28px;
     grid-template-columns: minmax(auto, 215px) 1fr;
     padding: 28px;
@@ -23,11 +23,11 @@ export const PersonTileWrapper = styled.div`
 `;
 
 export const PersonPhoto = styled.img`
-    max-width: 312px;
-    border-radius: 5px;
-    grid-row: span 2 / auto;
+  max-width: 312px;
+  border-radius: 5px;
+  grid-row: span 2 / auto;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     width: 215px;
     height: 319px;
   }

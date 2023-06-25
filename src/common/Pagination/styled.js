@@ -1,7 +1,6 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { ReactComponent as ArrowRight } from "../img/vectorNext.svg";
 import { ReactComponent as ArrowLeft } from "../img/vectorPrevious.svg";
-
 
 export const Wrapper = styled.div`
   display: inline-flex;
@@ -81,5 +80,5 @@ export const StyledArrowRight = styled(ArrowRight)`
 `;
 
 export const StyledArrowLeft = styled(ArrowLeft)`
-color: ${({ theme }) => theme.colors.darkerGrey};
+  color: ${({ theme }) => theme.colors.darkerGrey};
 `;
